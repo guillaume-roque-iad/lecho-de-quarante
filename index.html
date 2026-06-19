@@ -1,0 +1,2039 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'Écho de Quarante — Journal citoyen indépendant (34310)</title>
+<meta name="description" content="L'Écho de Quarante : l'information indépendante du village de Quarante (Hérault). Actualités, commerces, agenda, conseil municipal, chiffres clés et transparence du budget communal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" fetchpriority="high" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/1280px-Quarante_mairie.JPG">
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"></noscript>
+<style>
+  :root{
+    --encre:#1d2b36;          /* schiste / ink */
+    --encre-clair:#33454f;
+    --pierre:#f5f2ea;         /* stone paper */
+    --pierre-fonce:#e7e1d3;
+    --blanc:#fffefb;
+    --vigne:#3f5a40;          /* vine green - civic/transparency */
+    --vigne-clair:#5c7a5c;
+    --ocre:#b07d24;           /* ochre gold - identité, chiffres, CTA */
+    --ocre-clair:#d6a64a;
+    --brique:#9c4a32;         /* signal sobre */
+    --gris:#6b6256;
+    --trait:#d8d1c2;
+    --ombre:0 1px 0 rgba(29,43,54,.04), 0 8px 28px -18px rgba(29,43,54,.45);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--pierre);
+    color:var(--encre);
+    font-family:'Inter',system-ui,sans-serif;
+    font-size:18px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;line-height:1.08;letter-spacing:-.01em}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  .mono{font-family:'IBM Plex Mono',monospace}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--ocre);font-weight:500;
+  }
+
+  /* ---- bandeau indépendance ---- */
+  .bandeau{
+    background:var(--encre);color:var(--pierre);
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.74rem;letter-spacing:.04em;
+    text-align:center;padding:8px 24px;
+  }
+  .bandeau strong{color:var(--ocre-clair);font-weight:600}
+
+  /* ---- masthead ---- */
+  .masthead{background:var(--encre);color:var(--pierre);padding:34px 0 26px;position:relative;overflow:hidden}
+  .masthead .wrap{position:relative;z-index:2}
+  .mast-grid{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center}
+  .nombre40{
+    font-family:'Fraunces',serif;font-weight:900;font-size:clamp(78px,15vw,150px);
+    line-height:.82;color:var(--ocre);
+    font-variation-settings:'opsz' 144;
+    letter-spacing:-.04em;
+    text-shadow:0 0 0 transparent;
+  }
+  .nombre40 span{display:block;font-size:.13em;letter-spacing:.32em;color:var(--pierre-fonce);
+    font-weight:500;text-transform:uppercase;margin-top:.4em;font-family:'IBM Plex Mono',monospace}
+  .titre-journal{font-size:clamp(2.4rem,6vw,4.3rem);font-weight:900;letter-spacing:-.02em}
+  .titre-journal em{font-style:italic;font-weight:500;color:var(--ocre-clair)}
+  .sous-titre{font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.05em;
+    color:var(--pierre-fonce);margin-top:14px;border-top:1px solid rgba(245,242,234,.22);
+    padding-top:12px;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
+  .sous-titre .pastille{width:7px;height:7px;border-radius:50%;background:var(--vigne-clair);display:inline-block}
+
+  /* ---- nav ---- */
+  nav.rubriques{position:sticky;top:0;z-index:40;background:var(--pierre);
+    border-bottom:1px solid var(--trait);box-shadow:var(--ombre)}
+  .nav-inner{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding:0 12px}
+  .nav-inner::-webkit-scrollbar{display:none}
+  nav.rubriques a{
+    white-space:nowrap;font-family:'IBM Plex Mono',monospace;font-size:.78rem;
+    letter-spacing:.04em;text-decoration:none;color:var(--encre-clair);
+    padding:14px 14px;border-bottom:2px solid transparent;font-weight:500;
+  }
+  nav.rubriques a:hover,nav.rubriques a:focus-visible{color:var(--ocre);border-bottom-color:var(--ocre)}
+
+  /* ---- sections ---- */
+  section{padding:64px 0;border-bottom:1px solid var(--trait)}
+  .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:34px;flex-wrap:wrap}
+  .sec-head h2{font-size:clamp(1.9rem,4.5vw,2.9rem);font-weight:600}
+  .sec-num{font-family:'IBM Plex Mono',monospace;color:var(--ocre);font-size:.95rem;font-weight:600}
+  .sec-head p{flex-basis:100%;color:var(--gris);max-width:62ch;margin-top:-6px}
+
+  /* ---- à la une ---- */
+  .une{display:grid;grid-template-columns:1.4fr 1fr;gap:28px}
+  .article-phare{background:var(--blanc);border:1px solid var(--trait);border-radius:4px;
+    overflow:hidden;box-shadow:var(--ombre);display:flex;flex-direction:column}
+  .article-phare .visuel{aspect-ratio:16/9;background:
+    linear-gradient(135deg,var(--encre) 0%,var(--vigne) 100%);
+    display:flex;align-items:flex-end;padding:18px;color:var(--pierre)}
+  .article-phare .visuel .tag{font-family:'IBM Plex Mono',monospace;font-size:.7rem;
+    letter-spacing:.12em;text-transform:uppercase;background:rgba(0,0,0,.28);
+    padding:5px 10px;border-radius:3px}
+  .article-phare .corps{padding:22px 24px 26px}
+  .article-phare h3{font-size:1.7rem;font-weight:600;margin-bottom:10px}
+  .article-phare p{color:var(--encre-clair);font-size:1rem}
+  .meta{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--gris);
+    letter-spacing:.04em;margin-top:14px}
+  .col-breves{display:flex;flex-direction:column;gap:16px}
+  .breve{background:var(--blanc);border:1px solid var(--trait);border-radius:4px;padding:16px 18px}
+  .breve h4{font-size:1.12rem;font-weight:600;margin-bottom:6px}
+  .breve p{font-size:.92rem;color:var(--encre-clair)}
+  .exemple{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.62rem;
+    letter-spacing:.08em;text-transform:uppercase;color:var(--brique);
+    border:1px solid var(--brique);border-radius:3px;padding:2px 7px;margin-bottom:10px}
+
+  /* ---- commerces ---- */
+  .grille-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .carte{background:var(--blanc);border:1px solid var(--trait);border-radius:4px;
+    padding:22px;box-shadow:var(--ombre)}
+  .carte .ico{width:42px;height:42px;border-radius:50%;background:var(--pierre-fonce);
+    display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;
+    font-weight:900;color:var(--vigne);margin-bottom:14px;font-size:1.2rem}
+  .carte h3{font-size:1.25rem;font-weight:600;margin-bottom:6px}
+  .carte p{font-size:.92rem;color:var(--encre-clair)}
+
+  /* ---- agenda ---- */
+  .agenda-liste{display:flex;flex-direction:column;gap:0}
+  .evt{display:grid;grid-template-columns:96px 1fr auto;gap:20px;align-items:center;
+    padding:18px 0;border-top:1px solid var(--trait)}
+  .evt:last-child{border-bottom:1px solid var(--trait)}
+  .evt .date{font-family:'Fraunces',serif;text-align:center;line-height:1}
+  .evt .date .j{font-size:2.1rem;font-weight:900;color:var(--encre);display:block}
+  .evt .date .j.txt{font-size:1.05rem;font-weight:700;line-height:1.1}
+  .evt .date .m{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--ocre)}
+  .evt h4{font-size:1.15rem;font-weight:600}
+  .evt p{font-size:.85rem;color:var(--gris)}
+  .evt .lieu{font-family:'IBM Plex Mono',monospace;font-size:.74rem;color:var(--vigne);
+    text-align:right;white-space:nowrap}
+
+  /* ---- conseil ---- */
+  .conseil-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:start}
+  .pv-liste{display:flex;flex-direction:column;gap:12px}
+  .pv{display:flex;justify-content:space-between;align-items:center;gap:14px;
+    background:var(--blanc);border:1px solid var(--trait);border-radius:4px;padding:15px 18px}
+  .pv .quoi{font-weight:600}
+  .pv .quand{font-family:'IBM Plex Mono',monospace;font-size:.74rem;color:var(--gris)}
+  .pv a{font-family:'IBM Plex Mono',monospace;font-size:.74rem;color:var(--ocre);
+    text-decoration:none;border:1px solid var(--ocre);border-radius:3px;padding:5px 10px;white-space:nowrap}
+  .pv a:hover{background:var(--ocre);color:var(--blanc)}
+  .encart{background:var(--encre);color:var(--pierre);border-radius:4px;padding:26px}
+  .encart h3{color:var(--ocre-clair);font-size:1.3rem;font-weight:600;margin-bottom:14px}
+  .encart ol{list-style:none;counter-reset:e;display:flex;flex-direction:column;gap:13px}
+  .encart li{counter-increment:e;padding-left:38px;position:relative;font-size:.92rem;color:var(--pierre-fonce)}
+  .encart li::before{content:counter(e);position:absolute;left:0;top:0;
+    font-family:'IBM Plex Mono',monospace;font-weight:600;color:var(--encre);
+    background:var(--ocre-clair);width:26px;height:26px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;font-size:.8rem}
+  .encart .loi{margin-top:18px;font-family:'IBM Plex Mono',monospace;font-size:.7rem;
+    color:var(--vigne-clair);border-top:1px solid rgba(245,242,234,.2);padding-top:12px}
+
+  /* ---- exécutif & gabarit compte rendu ---- */
+  .exec-wrap{margin-top:34px}
+  .exec-wrap h3{font-size:1.3rem;font-weight:600;margin-bottom:4px}
+  .exec-wrap .sous{font-family:'IBM Plex Mono',monospace;font-size:.74rem;color:var(--gris);margin-bottom:18px}
+  .exec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .elu{background:var(--blanc);border:1px solid var(--trait);border-radius:4px;padding:16px 18px}
+  .elu.maire{border-left:4px solid var(--ocre)}
+  .elu .role{font-family:'IBM Plex Mono',monospace;font-size:.64rem;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--ocre);font-weight:600;margin-bottom:6px;display:block}
+  .elu .nom{font-family:'Fraunces',serif;font-size:1.12rem;font-weight:600;line-height:1.15}
+  .elu .deleg{font-size:.84rem;color:var(--gris);margin-top:4px}
+  .gabarit{background:var(--blanc);border:1px dashed var(--vigne);border-radius:6px;
+    padding:24px 26px;margin-top:30px}
+  .gabarit .tag-g{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.62rem;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--vigne);font-weight:600;
+    border:1px solid var(--vigne);border-radius:3px;padding:3px 8px;margin-bottom:12px}
+  .gabarit h3{font-size:1.35rem;font-weight:600;margin-bottom:10px}
+  .gabarit .modele{background:var(--pierre);border-radius:4px;padding:18px 20px;margin-top:14px}
+  .gabarit .modele h4{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--encre-clair);margin:14px 0 4px}
+  .gabarit .modele h4:first-child{margin-top:0}
+  .gabarit .modele p{font-size:.9rem;color:var(--gris);line-height:1.5}
+
+  /* ---- chiffres clés ---- */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--trait);
+    border:1px solid var(--trait);border-radius:4px;overflow:hidden}
+  .stat{background:var(--blanc);padding:24px 20px}
+  .stat .val{font-family:'IBM Plex Mono',monospace;font-size:1.9rem;font-weight:600;
+    color:var(--encre);line-height:1}
+  .stat .lbl{font-size:.82rem;color:var(--encre-clair);margin-top:8px}
+  .stat .src{font-family:'IBM Plex Mono',monospace;font-size:.62rem;color:var(--gris);
+    margin-top:8px;letter-spacing:.02em}
+  .stat .delta{font-family:'IBM Plex Mono',monospace;font-size:.7rem;margin-top:6px}
+  .delta.up{color:var(--vigne)} .delta.down{color:var(--brique)}
+
+  /* ---- budget / transparence (signature) ---- */
+  #budget{background:var(--encre);color:var(--pierre);border-bottom:none}
+  #budget .sec-head h2{color:var(--pierre)}
+  #budget .sec-head p{color:var(--pierre-fonce)}
+  #budget .sec-num{color:var(--ocre-clair)}
+  #budget .eyebrow{color:var(--ocre-clair)}
+  .budget-cols{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .flux h3{color:var(--pierre);font-size:1.45rem;font-weight:600;margin-bottom:4px}
+  .flux .total{font-family:'IBM Plex Mono',monospace;color:var(--ocre-clair);font-size:.85rem;margin-bottom:20px}
+  .barre{margin-bottom:16px}
+  .barre .top{display:flex;justify-content:space-between;font-size:.9rem;margin-bottom:6px}
+  .barre .top .euro{font-family:'IBM Plex Mono',monospace;color:var(--pierre-fonce)}
+  .barre .piste{height:11px;background:rgba(245,242,234,.12);border-radius:6px;overflow:hidden}
+  .barre .rempli{height:100%;border-radius:6px;width:0;transition:width 1.1s cubic-bezier(.22,1,.36,1)}
+  .r1{background:var(--ocre-clair)} .r2{background:var(--vigne-clair)}
+  .r3{background:#7d93a8} .r4{background:#a98b6b}
+  .dette{margin-top:36px;background:rgba(245,242,234,.06);border:1px solid rgba(245,242,234,.16);
+    border-radius:4px;padding:24px}
+  .dette h3{color:var(--pierre);font-size:1.2rem;margin-bottom:16px;font-weight:600}
+  .dette-row{display:grid;grid-template-columns:1fr auto auto;gap:14px;align-items:baseline;
+    padding:10px 0;border-top:1px solid rgba(245,242,234,.12);font-size:.9rem}
+  .dette-row:first-of-type{border-top:none}
+  .dette-row .q{color:var(--pierre-fonce)}
+  .dette-row .commune{font-family:'IBM Plex Mono',monospace;color:var(--ocre-clair);font-weight:600;font-size:1.05rem}
+  .dette-row .strate{font-family:'IBM Plex Mono',monospace;color:var(--gris);font-size:.78rem}
+  .verdict{margin-top:18px;font-size:.92rem;color:var(--pierre-fonce);line-height:1.55}
+  .verdict strong{color:var(--vigne-clair)}
+  #budget .source-note{margin-top:28px;font-family:'IBM Plex Mono',monospace;font-size:.68rem;
+    color:var(--gris);letter-spacing:.02em}
+
+  /* ---- assos ---- */
+  .grille-asso{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
+  .asso{background:var(--blanc);border:1px solid var(--trait);border-radius:4px;padding:16px 18px}
+  .asso h4{font-size:1.02rem;font-weight:600;margin-bottom:4px}
+  .asso p{font-size:.8rem;color:var(--gris)}
+
+  /* ---- fiches dépliables ---- */
+  .cat-titre{font-size:1.12rem;font-weight:600;color:var(--vigne);margin:0 0 12px;
+    font-family:'Fraunces',serif}
+  .cat-titre:not(:first-of-type){margin-top:30px}
+  .fiches{display:flex;flex-direction:column;gap:9px}
+  .fiche{background:var(--blanc);border:1px solid var(--trait);border-radius:5px;overflow:hidden}
+  .fiche>summary{cursor:pointer;list-style:none;padding:15px 18px;display:flex;
+    align-items:center;gap:12px;transition:background .15s ease}
+  .fiche>summary::-webkit-details-marker{display:none}
+  .fiche>summary:hover{background:var(--pierre)}
+  .fiche>summary .chev{flex-shrink:0;width:18px;height:18px;color:var(--ocre);
+    transition:transform .2s ease;font-size:1rem;line-height:1}
+  .fiche[open]>summary{background:var(--pierre);border-bottom:1px solid var(--trait)}
+  .fiche[open]>summary .chev{transform:rotate(90deg)}
+  .fiche .nom-f{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;flex:1;line-height:1.2}
+  .fiche .cat-f{font-family:'IBM Plex Mono',monospace;font-size:.6rem;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--vigne);border:1px solid var(--trait);
+    border-radius:3px;padding:3px 7px;white-space:nowrap}
+  .fiche-corps{padding:6px 18px 18px}
+  .coord{display:grid;grid-template-columns:108px 1fr;gap:7px 14px;font-size:.92rem;margin-top:10px}
+  .coord .lbl{font-family:'IBM Plex Mono',monospace;font-size:.64rem;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--gris);padding-top:3px}
+  .coord .val{color:var(--encre)}
+  .coord .val a{color:var(--ocre);text-decoration:none}
+  .coord .val a:hover{text-decoration:underline}
+  .coord .aconf{color:var(--gris);font-style:italic}
+  .fiche-note{font-size:.82rem;color:var(--brique);margin-top:12px;line-height:1.5}
+  @media(max-width:520px){
+    .coord{grid-template-columns:1fr;gap:2px 0}
+    .coord .lbl{padding-top:8px}
+    .fiche .cat-f{display:none}
+  }
+
+  /* ---- participation ---- */
+  #contact{background:var(--vigne);color:var(--pierre);border-bottom:none}
+  #contact .eyebrow{color:var(--ocre-clair)}
+  #contact h2{color:var(--pierre);font-size:clamp(2rem,5vw,3rem);font-weight:600;max-width:18ch}
+  #contact p.intro{color:var(--pierre-fonce);max-width:58ch;margin:18px 0 30px;font-size:1.05rem}
+  .actions{display:flex;flex-wrap:wrap;gap:14px}
+  .btn{font-family:'IBM Plex Mono',monospace;font-size:.82rem;letter-spacing:.03em;
+    text-decoration:none;padding:14px 24px;border-radius:4px;font-weight:600;
+    display:inline-flex;align-items:center;gap:8px;transition:transform .15s ease}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-or{background:var(--ocre);color:var(--encre)}
+  .btn-ligne{background:transparent;color:var(--pierre);border:1px solid var(--pierre)}
+  .droit-reponse{margin-top:32px;font-size:.85rem;color:var(--pierre-fonce);
+    border-top:1px solid rgba(245,242,234,.25);padding-top:18px;max-width:70ch}
+
+  /* ---- footer ---- */
+  footer{background:var(--encre);color:var(--pierre-fonce);padding:54px 0 40px;font-size:.85rem}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;margin-bottom:34px}
+  footer h4{color:var(--pierre);font-size:1.05rem;font-weight:600;margin-bottom:12px;font-family:'Fraunces',serif}
+  footer p,footer li{color:var(--pierre-fonce);line-height:1.55}
+  footer ul{list-style:none}
+  footer .ml{font-family:'IBM Plex Mono',monospace;font-size:.72rem;line-height:1.7}
+  footer .ml .ph{color:var(--ocre-clair)}
+  .sources-box{font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--gris);
+    border-top:1px solid rgba(245,242,234,.16);padding-top:20px;line-height:1.8}
+  .foot-bas{border-top:1px solid rgba(245,242,234,.16);margin-top:24px;padding-top:20px;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+    font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--gris)}
+
+  /* ---- tags & liens lire ---- */
+  .rubrique-tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.62rem;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--vigne);font-weight:600;
+    border:1px solid var(--vigne);border-radius:3px;padding:3px 8px;margin-bottom:10px}
+  .lire{font-family:'IBM Plex Mono',monospace;font-size:.74rem;color:var(--ocre);font-weight:600;
+    letter-spacing:.02em;display:inline-block;margin-top:10px}
+  .article-phare[data-article],.breve[data-article]{cursor:pointer;transition:transform .15s ease,box-shadow .2s ease}
+  .article-phare[data-article]:hover,.breve[data-article]:hover{transform:translateY(-3px)}
+  .breve[data-article]:hover{box-shadow:var(--ombre);border-color:var(--ocre)}
+  .article-phare[data-article]:hover .lire,.breve[data-article]:hover .lire{text-decoration:underline}
+
+  /* ---- lecteur d'article ---- */
+  .lecteur{position:fixed;inset:0;z-index:90;background:rgba(20,28,34,.55);
+    backdrop-filter:blur(3px);display:none;overflow-y:auto;padding:0}
+  .lecteur.ouvert{display:block}
+  .lecteur-papier{background:var(--pierre);max-width:760px;margin:0 auto;min-height:100%;
+    box-shadow:0 0 60px rgba(0,0,0,.3)}
+  .lecteur-barre{position:sticky;top:0;z-index:2;background:var(--encre);color:var(--pierre);
+    display:flex;justify-content:space-between;align-items:center;padding:14px 26px;
+    font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.06em}
+  .lecteur-barre .ferme{background:none;border:1px solid rgba(245,242,234,.4);color:var(--pierre);
+    border-radius:4px;padding:7px 14px;cursor:pointer;font-family:inherit;font-size:.74rem}
+  .lecteur-barre .ferme:hover{background:var(--ocre);border-color:var(--ocre);color:var(--encre)}
+  .article-body{padding:42px 48px 70px}
+  .article-body .surtitre{font-family:'IBM Plex Mono',monospace;font-size:.74rem;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--ocre);font-weight:600;margin-bottom:14px}
+  .article-body h1{font-size:clamp(2rem,5vw,2.9rem);font-weight:900;line-height:1.04;margin-bottom:16px}
+  .article-body .chapeau{font-size:1.2rem;line-height:1.5;color:var(--encre-clair);
+    font-family:'Fraunces',serif;font-weight:500;font-style:italic;margin-bottom:8px}
+  .article-body .signature{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--gris);
+    border-bottom:1px solid var(--trait);padding-bottom:22px;margin-bottom:28px}
+  .article-body h2{font-size:1.5rem;font-weight:600;margin:34px 0 12px;color:var(--encre)}
+  .article-body p{margin-bottom:16px;line-height:1.7}
+  .article-body p.lead::first-letter{font-family:'Fraunces',serif;font-weight:900;float:left;
+    font-size:3.6rem;line-height:.78;padding:6px 10px 0 0;color:var(--ocre)}
+  .article-body strong{font-weight:700}
+  .article-body ul{margin:0 0 18px 0;padding-left:0;list-style:none}
+  .article-body ul li{position:relative;padding-left:24px;margin-bottom:9px;line-height:1.6}
+  .article-body ul li::before{content:"—";position:absolute;left:0;color:var(--ocre);font-weight:700}
+  .chiffre-cle{display:flex;gap:18px;flex-wrap:wrap;margin:24px 0;padding:20px;
+    background:var(--encre);border-radius:6px}
+  .chiffre-cle .c{flex:1;min-width:120px}
+  .chiffre-cle .c .n{font-family:'IBM Plex Mono',monospace;font-size:1.5rem;font-weight:600;color:var(--ocre-clair);line-height:1}
+  .chiffre-cle .c .t{font-size:.8rem;color:var(--pierre-fonce);margin-top:6px}
+  .encadre-loi{background:var(--blanc);border-left:4px solid var(--vigne);border-radius:4px;
+    padding:18px 22px;margin:24px 0}
+  .encadre-loi h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;color:var(--vigne);margin-bottom:8px}
+  .encadre-loi p{font-size:.94rem;margin-bottom:8px}
+  .encadre-verif{background:#fbf3e3;border:1px dashed var(--ocre);border-radius:4px;
+    padding:14px 18px;margin:22px 0;font-size:.9rem;color:#6b5320}
+  .encadre-verif strong{color:var(--brique)}
+  .questions{background:var(--pierre-fonce);border-radius:6px;padding:22px 24px;margin:28px 0}
+  .questions h3{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;margin-bottom:12px}
+  .questions ol{margin:0;padding-left:20px}
+  .questions li{margin-bottom:8px;line-height:1.55}
+  .article-sources{font-family:'IBM Plex Mono',monospace;font-size:.7rem;line-height:1.8;
+    color:var(--gris);border-top:1px solid var(--trait);margin-top:34px;padding-top:18px}
+  .article-sources b{color:var(--encre)}
+  .droit-rep-art{font-size:.86rem;color:var(--gris);font-style:italic;margin-top:16px}
+  @media(max-width:560px){.article-body{padding:30px 24px 56px}.lecteur-barre{padding:12px 18px}}
+
+  /* ---- bannière photo ---- */
+  .hero-photo{position:relative;height:clamp(220px,40vw,420px);overflow:hidden;background:var(--encre)}
+  .hero-photo img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.05)}
+  .hero-photo .legende{position:absolute;left:0;right:0;bottom:0;
+    background:linear-gradient(transparent,rgba(20,28,34,.82));color:var(--pierre);
+    padding:42px 24px 12px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.03em}
+  .hero-photo .legende strong{color:var(--ocre-clair);font-weight:600}
+
+  /* ---- galerie ---- */
+  .galerie-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .galerie-grid figure{margin:0;background:var(--blanc);border:1px solid var(--trait);
+    border-radius:6px;overflow:hidden;box-shadow:var(--ombre)}
+  .galerie-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:var(--pierre-fonce)}
+  .galerie-grid figcaption{padding:10px 14px;font-size:.9rem;color:var(--encre)}
+  .galerie-grid figcaption .credit{display:block;font-family:'IBM Plex Mono',monospace;
+    font-size:.64rem;color:var(--gris);margin-top:4px}
+  .galerie-grid figcaption .credit a{color:var(--gris)}
+  .galerie-note{font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--gris);margin-top:18px;line-height:1.7}
+  @media(max-width:880px){.galerie-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.galerie-grid{grid-template-columns:1fr}}
+
+  /* ---- formulaire de contact ---- */
+  .form-contact{display:grid;gap:14px;max-width:640px;margin-top:6px}
+  .form-contact .row{display:grid;gap:14px}
+  @media(min-width:560px){.form-contact .row{grid-template-columns:1fr 1fr}}
+  .form-contact label{display:block;font-family:'IBM Plex Mono',monospace;font-size:.7rem;
+    letter-spacing:.06em;text-transform:uppercase;color:var(--pierre-fonce);margin-bottom:5px}
+  .form-contact input,.form-contact select,.form-contact textarea{width:100%;font:inherit;font-size:1rem;
+    padding:11px 13px;border:1px solid rgba(245,242,234,.45);border-radius:6px;
+    background:rgba(245,242,234,.10);color:var(--pierre)}
+  .form-contact textarea{min-height:130px;resize:vertical}
+  .form-contact input::placeholder,.form-contact textarea::placeholder{color:rgba(245,242,234,.55)}
+  .form-contact input:focus,.form-contact select:focus,.form-contact textarea:focus{outline:2px solid var(--ocre);border-color:var(--ocre)}
+  .form-contact select option{color:#1d2b36}
+  .form-contact .hp{position:absolute!important;left:-9999px;width:1px;height:1px;overflow:hidden}
+  .form-contact .btn-submit{justify-self:start;cursor:pointer;border:none}
+  .form-msg{margin-top:6px;font-size:.95rem;padding:12px 14px;border-radius:6px;display:none}
+  .form-msg.ok{display:block;background:rgba(92,122,92,.30);color:var(--pierre);border:1px solid var(--vigne-clair)}
+  .form-msg.err{display:block;background:rgba(156,74,50,.30);color:var(--pierre);border:1px solid var(--brique)}
+
+  /* ---- reveal ---- */
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.vu{opacity:1;transform:none}
+
+  /* ---- responsive ---- */
+  @media(max-width:880px){
+    .une,.conseil-grid,.budget-cols{grid-template-columns:1fr}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .grille-3{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr}
+    .mast-grid{grid-template-columns:1fr;gap:14px}
+    .nombre40{font-size:88px}
+  }
+  @media(max-width:520px){
+    body{font-size:17px}
+    .evt{grid-template-columns:64px 1fr;gap:14px}
+    .evt .lieu{display:none}
+    .dette-row{grid-template-columns:1fr auto}
+    .dette-row .strate{display:none}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{transition:none!important;scroll-behavior:auto!important}
+    .reveal{opacity:1;transform:none}
+  }
+  :focus-visible{outline:3px solid var(--ocre);outline-offset:2px;border-radius:2px}
+
+  /* ---- images (ajout) ---- */
+  .masthead .mast-photo{position:absolute;top:0;right:0;bottom:0;width:52%;
+    background-size:cover;background-position:center;opacity:.22;z-index:1;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 62%);
+    mask-image:linear-gradient(90deg,transparent,#000 62%)}
+  .article-phare .visuel{position:relative}
+  .article-phare .visuel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .article-phare .visuel::after{content:"";position:absolute;inset:0;z-index:1;
+    background:linear-gradient(0deg,rgba(20,30,38,.6),rgba(20,30,38,0) 58%)}
+  .article-phare .visuel .tag{position:relative;z-index:2}
+  .breve{position:relative}
+  .breve .breve-img{display:block;width:calc(100% + 36px);height:130px;object-fit:cover;
+    margin:-16px -18px 14px;border-bottom:1px solid var(--trait)}
+  .sec-photo{margin:0 0 32px;position:relative;border:1px solid var(--trait);border-radius:4px;
+    overflow:hidden;box-shadow:var(--ombre)}
+  .sec-photo img{display:block;width:100%;height:244px;object-fit:cover}
+  .sec-photo figcaption{position:absolute;right:0;bottom:0;
+    font-family:'IBM Plex Mono',monospace;font-size:.6rem;letter-spacing:.03em;
+    background:rgba(29,43,54,.74);color:var(--pierre);padding:4px 9px;border-top-left-radius:4px}
+  .credits-photos{font-family:'IBM Plex Mono',monospace;font-size:.66rem;line-height:1.75;
+    color:var(--gris);max-width:1080px;margin:0 auto;padding:34px 24px 4px}
+  .credits-photos h4{font-family:'Fraunces',Georgia,serif;font-size:1.05rem;color:var(--encre);margin-bottom:8px}
+  .credits-photos a{color:var(--vigne)}
+  @media(max-width:640px){.masthead .mast-photo{width:72%;opacity:.14}.sec-photo img{height:172px}}
+</style>
+</head>
+<body>
+
+<div class="bandeau">
+  Journal <strong>citoyen &amp; indépendant</strong> — sans lien avec la mairie de Quarante. Le site officiel de la commune est ville-quarante.fr
+</div>
+
+<header class="masthead">
+  <div class="mast-photo" aria-hidden="true" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/%C3%89glise_Sainte-Marie_de_Quarante_1.jpg/1280px-%C3%89glise_Sainte-Marie_de_Quarante_1.jpg')"></div>
+  <div class="wrap mast-grid">
+    <div class="nombre40">40<span>Hérault · 34310</span></div>
+    <div>
+      <div class="eyebrow">L'information du village, vérifiée et accessible</div>
+      <h1 class="titre-journal">L'Écho <em>de</em> Quarante</h1>
+      <div class="sous-titre">
+        <span><span class="pastille"></span> Édition citoyenne</span>
+        <span class="mono" id="dateJour">Minervois · Sud-Hérault</span>
+        <span>1 788 habitants · 30,06 km²</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="hero-photo">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/1280px-Quarante_mairie.JPG"
+       alt="La mairie de Quarante (Hérault)" loading="eager" fetchpriority="high" decoding="async" width="1280" height="853">
+  <div class="legende">Quarante, au cœur du Minervois (Hérault) &middot; <strong>Photo : Fagairolles 34 / Wikimedia Commons, CC BY-SA 4.0</strong></div>
+</div>
+
+<nav class="rubriques" aria-label="Rubriques">
+  <div class="wrap"><div class="nav-inner">
+    <a href="#actu">Actualités</a>
+    <a href="#commerces">Commerces</a>
+    <a href="#agenda">Agenda</a>
+    <a href="#conseil">Conseil municipal</a>
+    <a href="#chiffres">Chiffres clés</a>
+    <a href="#budget">Budget · Transparence</a>
+    <a href="#assos">Vie associative</a>
+    <a href="#galerie">Le village en images</a>
+    <a href="#contact">Participer</a>
+  </div></div>
+</nav>
+
+<!-- 01 ACTUALITÉS -->
+<section id="actu">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">01</span>
+      <h2>À la une</h2>
+      <p>Ce qui fait l'actualité de Quarante, raconté simplement et vérifié à la source. Mis à jour le 19/06/2026.</p>
+    </div>
+    <div class="une">
+      <article class="article-phare reveal">
+        <div class="visuel"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/%C3%89glise_Sainte-Marie_de_Quarante_1.jpg/1280px-%C3%89glise_Sainte-Marie_de_Quarante_1.jpg" alt="L'abbatiale Sainte-Marie, place de l'Abbadié à Quarante" loading="lazy" decoding="async"><span class="tag">Vie du village · 20 juin 2026</span></div>
+        <div class="corps">
+          <span class="rubrique-tag">Vie du village</span>
+          <h3>Demain samedi 20 juin, la Fête de la Musique ouvre l'été place de l'Abbadié</h3>
+          <p>C'est le grand rendez-vous qui lance la belle saison : la Fête de la Musique se tiendra demain
+             samedi 20 juin, à partir de 18h30, place de l'Abbadié. Au programme, une scène ouverte aux nouveaux
+             talents et une animation musicale assurée par JD Events. Côté gourmandise, la restauration sera
+             tenue par « Aux petits bonheurs de Chacha » et « Les crêpes de Mary », tandis que les sapeurs-pompiers
+             de Quarante et Cruzy assureront la buvette. Entrée libre : venez nombreux partager ce premier
+             moment de fête de l'été.</p>
+          <div class="meta">Par la rédaction · Source : Mairie de Quarante (PanneauPocket) · 19/06/2026
+             · <a href="https://app.panneaupocket.com/ville/395040186-quarante-34310" target="_blank" rel="noopener" class="lire">Source →</a>
+             · Photo : EmDee / Wikimedia, CC BY-SA 3.0</div>
+        </div>
+      </article>
+      <div class="col-breves">
+        <div class="breve reveal">
+          <img class="breve-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Quarante_passage.JPG/1280px-Quarante_passage.JPG" alt="Ruelle du centre ancien de Quarante" loading="lazy" decoding="async">
+          <span class="rubrique-tag">Travaux</span>
+          <h4>Eau potable : la 2ᵉ phase de la route de Saint-Privat est lancée</h4>
+          <p>Depuis le lundi 15 juin et pour une durée d'environ deux mois, des travaux de réhabilitation du
+             réseau d'eau potable sont engagés route de Saint-Privat et avenue du Château, de l'intersection
+             route de Béziers jusqu'à la rue des Beaumes. Un itinéraire de déviation est mis en place : un
+             chantier qui améliorera durablement notre cadre de vie. Merci de votre compréhension.</p>
+          <div class="meta">Source : Mairie de Quarante (PanneauPocket), 12/06/2026 · <a href="https://app.panneaupocket.com/ville/395040186-quarante-34310" target="_blank" rel="noopener" class="lire">Source →</a></div>
+        </div>
+        <div class="breve reveal">
+          <img class="breve-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Quarante_ecole_1.JPG/1280px-Quarante_ecole_1.JPG" alt="L'école de Quarante" loading="lazy" decoding="async">
+          <span class="rubrique-tag">Écoles</span>
+          <h4>Fête des écoliers : rendez-vous vendredi 26 juin</h4>
+          <p>L'APE voit grand pour la fête de fin d'année : vendredi 26 juin dès 18h30, sur le parking de la
+             salle polyvalente. Au programme, un spectacle en plein air sur la mythologie grecque (compagnie
+             Papier Machins), la remise des calculatrices aux CM2 en présence du maire, jeux gonflables, photo
+             booth et grande auberge espagnole pour clôturer la soirée.</p>
+          <div class="meta">Source : APE / Mairie de Quarante (PanneauPocket) · <a href="https://app.panneaupocket.com/ville/395040186-quarante-34310" target="_blank" rel="noopener" class="lire">Source →</a></div>
+        </div>
+        <div class="breve reveal">
+          <img class="breve-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/1280px-Quarante_mairie.JPG" alt="La mairie de Quarante" loading="lazy" decoding="async">
+          <span class="rubrique-tag">Pratique</span>
+          <h4>Transports scolaires : inscriptions ouvertes jusqu'au 31 juillet</h4>
+          <p>Les inscriptions aux transports scolaires pour l'année 2026/2027 sont ouvertes. Les demandes
+             doivent être faites avant le 31 juillet 2026 via le service en ligne d'Hérault Transport. Chaque
+             élève doit disposer d'un titre de transport valable, à valider à chaque montée — même en cas de
+             gratuité. Des frais de 25 € peuvent s'appliquer en cas d'inscription tardive non justifiée.</p>
+          <div class="meta">Source : Mairie de Quarante (PanneauPocket), 16/06/2026 · <a href="https://app.panneaupocket.com/ville/395040186-quarante-34310" target="_blank" rel="noopener" class="lire">Source →</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 COMMERCES -->
+<section id="commerces">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">02</span>
+      <h2>Commerces &amp; producteurs</h2>
+      <p>Les commerces de proximité, artisans et producteurs du village. Liste établie à partir de sources publiques vérifiées&nbsp;; signalez-nous toute correction ou nouvelle adresse.</p>
+    </div>
+    <figure class="sec-photo reveal"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Quarante_porche_1.JPG/1280px-Quarante_porche_1.JPG" alt="Porche et ruelle commerçante de Quarante" loading="lazy" decoding="async"><figcaption>© Fagairolles 34 / CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Quarante_porche_1.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure>
+    <p class="cat-titre">Alimentation</p>
+    <div class="fiches reveal">
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">J'm'occupe du pain</span><span class="cat-f">Boulangerie</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Activité</div><div class="val">Boulangerie-pâtisserie artisanale, salon de thé</div>
+          <div class="lbl">Adresse</div><div class="val">12 place de la Mairie, 34310 Quarante</div>
+          <div class="lbl">Tél.</div><div class="val"><a href="tel:+33952124590">09 52 12 45 90</a></div>
+          <div class="lbl">Horaires</div><div class="val">Lun, mar, jeu, ven, sam 6h15–12h30 &amp; 16h–18h30 · dim 6h15–12h30 · <strong>fermé le mercredi</strong></div>
+          <div class="lbl">Gérants</div><div class="val">Cédric Touren &amp; Cynthia</div>
+          <div class="lbl">SIREN</div><div class="val">878 009 216 (société active)</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Boucherie Cathala</span><span class="cat-f">Boucherie</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Activité</div><div class="val">Boucherie, charcuterie, triperie, traiteur (primée Hérault Gourmand)</div>
+          <div class="lbl">Adresse</div><div class="val">10 avenue de la Promenade, 34310 Quarante</div>
+          <div class="lbl">Tél.</div><div class="val"><a href="tel:+33467894640">04 67 89 46 40</a> · <a href="tel:+33662324640">06 62 32 46 40</a></div>
+          <div class="lbl">Gérant</div><div class="val">Philippe Cathala</div>
+          <div class="lbl">SIREN</div><div class="val">811 222 306 (société active)</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Boucherie — 9 Grand'Rue</span><span class="cat-f">Boucherie</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Activité</div><div class="val">Boucherie, charcuterie, rôtisserie</div>
+          <div class="lbl">Adresse</div><div class="val">9 Grand'Rue, 34310 Quarante</div>
+          <div class="lbl">Tél.</div><div class="val"><a href="tel:+33467894076">04 67 89 40 76</a></div>
+        </div>
+        <p class="fiche-note">Boucherie historique « Miquel », reprise fin 2023 (registres : SAS Maison Aguera, dirigeant Pierre Aguera). Le commerce reste ouvert ; l'enseigne exacte affichée est à confirmer sur place.</p></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Tabac · Presse · Loto · Épicerie</span><span class="cat-f">Tabac-presse</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Adresse</div><div class="val">5 Plan des Écoles, 34310 Quarante</div>
+          <div class="lbl">Tél.</div><div class="val"><a href="tel:+33467897231">04 67 89 72 31</a></div>
+          <div class="lbl">Activités</div><div class="val">Tabac, presse, loto, épicerie, revendeur gaz</div>
+          <div class="lbl">Responsable</div><div class="val">Géraldine Galindo</div>
+        </div></div>
+      </details>
+    </div>
+    <p class="fiche-note" style="margin-top:6px">À noter : la supérette Vival (17 Grand-Rue) a fermé. Le village ne dispose plus de supérette ; l'épicerie de dépannage est assurée par le Tabac-Presse-Épicerie. Marché hebdomadaire le mercredi matin, place de l'Abbadie.</p>
+
+    <p class="cat-titre">Vin &amp; producteurs</p>
+    <div class="fiches reveal">
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Domaine de Pech-Ménel</span><span class="cat-f">Vin · caveau</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Activité</div><div class="val">Cave particulière, vins bio AOP Saint-Chinian — caveau de vente</div>
+          <div class="lbl">Adresse</div><div class="val">Route de Creissan (D37E), 34310 Quarante</div>
+          <div class="lbl">Tél.</div><div class="val"><a href="tel:+33607965001">06 07 96 50 01</a> · <a href="tel:+33467894142">04 67 89 41 42</a></div>
+          <div class="lbl">Vigneronnes</div><div class="val">Élisabeth &amp; Marie Poux</div>
+          <div class="lbl">Site</div><div class="val"><a href="https://www.pech-menel.com" target="_blank" rel="noopener">pech-menel.com</a></div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Domaine de Saliès</span><span class="cat-f">Vin · caveau</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Activité</div><div class="val">Cave particulière, vins IGP Pays d'Oc — caveau (Vignerons indépendants)</div>
+          <div class="lbl">Adresse</div><div class="val">Château de Saliès, avenue de la Gare, 34310 Quarante</div>
+          <div class="lbl">Caveau</div><div class="val">Ouvert toute l'année — appeler avant de passer</div>
+          <div class="lbl">Site</div><div class="val"><a href="https://www.domainedesalies.com" target="_blank" rel="noopener">domainedesalies.com</a></div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Domaine Terres 2 Frères</span><span class="cat-f">Vin · caveau</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Activité</div><div class="val">Cave particulière, vins bio (AB) AOP Saint-Chinian — dégustation</div>
+          <div class="lbl">Adresse</div><div class="val">12 route de Saint-Privat, 34310 Quarante</div>
+          <div class="lbl">Vignerons</div><div class="val">Frères Ortiz (cave particulière créée en 2020)</div>
+          <div class="lbl">Site</div><div class="val"><a href="https://www.terres2freres.com" target="_blank" rel="noopener">terres2freres.com</a></div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Les Vignerons de Schistes</span><span class="cat-f">Vin · négoce</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Activité</div><div class="val">Vinification &amp; négoce de vins (marque « L'impudent »)</div>
+          <div class="lbl">Adresse</div><div class="val">Route de Fontanche, 34310 Quarante</div>
+          <div class="lbl">Dirigeants</div><div class="val">Gilles Cantons (président), Maxime Cantons</div>
+          <div class="lbl">SIREN</div><div class="val">408 551 133 (société active)</div>
+        </div>
+        <p class="fiche-note">Société de négoce/vinification, distincte de l'ancienne cave coopérative. Existence d'un caveau ouvert au public à confirmer.</p></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">La Ferme Lo Masèl</span><span class="cat-f">Producteur</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Activité</div><div class="val">Élevage de porcs plein air (porc noir, Kintoa, Mangalitsa) ; pâtés, rillettes, saucisses — vente directe</div>
+          <div class="lbl">Adresse</div><div class="val">19 route de Saint-Privat, 34310 Quarante</div>
+          <div class="lbl">Producteurs</div><div class="val">Jean-Philippe &amp; Magda Rivayrand</div>
+          <div class="lbl">Vente</div><div class="val">Sur commande &amp; sur les marchés locaux · Facebook « La ferme Lo Masèl »</div>
+        </div></div>
+      </details>
+    </div>
+    <p class="fiche-note" style="margin-top:6px">À noter : l'ancienne cave coopérative de Quarante (av. de la Gare) a cessé en 2021 (reprise par le groupe Ormarine) — pas de caveau coopératif de vente au public sur place.</p>
+
+    <p class="cat-titre">Santé</p>
+    <div class="fiches reveal">
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Pharmacie Barrère</span><span class="cat-f">Pharmacie</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Adresse</div><div class="val">6 rue du Parc du Château, 34310 Quarante</div>
+          <div class="lbl">Tél.</div><div class="val"><a href="tel:+33467894555">04 67 89 45 55</a></div>
+          <div class="lbl">Horaires</div><div class="val">Lun–ven 8h30–20h · sam 9h–16h30 · dim fermé <span class="aconf">(à confirmer)</span></div>
+          <div class="lbl">Site</div><div class="val"><a href="https://pharmaciebarrere.pharm-upp.fr" target="_blank" rel="noopener">pharmaciebarrere.pharm-upp.fr</a></div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Dr Valérie Sarrazin</span><span class="cat-f">Médecin</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Activité</div><div class="val">Médecin généraliste (conventionnée secteur 1) — seul médecin du village</div>
+          <div class="lbl">Adresse</div><div class="val">Parc du Château, 34310 Quarante</div>
+          <div class="lbl">Tél.</div><div class="val"><a href="tel:+33467897646">04 67 89 76 46</a></div>
+          <div class="lbl">Rendez-vous</div><div class="val">Par téléphone</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Cabinet de kinésithérapie &amp; ostéopathie</span><span class="cat-f">Kiné · ostéo</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Adresse</div><div class="val">12 avenue du Château, 34310 Quarante</div>
+          <div class="lbl">Praticiens</div><div class="val">Hugues Wawoczny (kiné-ostéopathe), Christelle Malglaive (kiné), Barbara Michel (kiné), Franck Michel (ostéo-kiné)</div>
+          <div class="lbl">Rendez-vous</div><div class="val">En ligne (Doctolib / agenda.direct) ou via le cabinet</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Infirmier(e)s libéraux</span><span class="cat-f">Infirmiers</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Praticien(ne)s</div><div class="val">Martine Morcillo (<a href="tel:+33467894955">04 67 89 49 55</a>), Pauline Rivera, Benoît Montsarrat, Silvain Cazal</div>
+          <div class="lbl">Activité</div><div class="val">Soins infirmiers à domicile et au cabinet · RDV via Doctolib / Opaline</div>
+          <div class="lbl">Note</div><div class="val aconf">Plusieurs cabinets dans le village ; composition susceptible d'évoluer</div>
+        </div></div>
+      </details>
+    </div>
+
+    <p class="cat-titre">Restauration &amp; bar</p>
+    <div class="fiches reveal">
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Le Bar de 40</span><span class="cat-f">Bar · restaurant</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Activité</div><div class="val">Bar-brasserie, restauration</div>
+          <div class="lbl">Adresse</div><div class="val">17 avenue de la Promenade, 34310 Quarante</div>
+          <div class="lbl">Tél.</div><div class="val"><a href="tel:+33467893649">04 67 89 36 49</a></div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Tito Pizza</span><span class="cat-f">Pizzeria</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Activité</div><div class="val">Pizzeria (sur place &amp; à emporter)</div>
+          <div class="lbl">Adresse</div><div class="val">1 route de Saint-Privat, 34310 Quarante</div>
+          <div class="lbl">Tél.</div><div class="val"><a href="tel:+33467897002">04 67 89 70 02</a></div>
+          <div class="lbl">Horaires</div><div class="val">Jeu–dim 18h–22h <span class="aconf">(à confirmer)</span></div>
+        </div></div>
+      </details>
+    </div>
+
+    <p class="cat-titre">Coiffure &amp; bien-être</p>
+    <div class="fiches reveal">
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Atelier Coiffure Au Carré</span><span class="cat-f">Coiffure</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Activité</div><div class="val">Salon de coiffure mixte (Marjorie Barthe &amp; Audrey)</div>
+          <div class="lbl">Adresse</div><div class="val">7 Grand Rue, 34310 Quarante</div>
+          <div class="lbl">Rendez-vous</div><div class="val">En ligne (Planity)</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">2 Mèches Avec Vous</span><span class="cat-f">Coiffure</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Activité</div><div class="val">Salon de coiffure mixte</div>
+          <div class="lbl">Adresse</div><div class="val">2 avenue des Écoles, 34310 Quarante</div>
+          <div class="lbl">Tél.</div><div class="val"><a href="tel:+33467894229">04 67 89 42 29</a></div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Le Miroir Secret</span><span class="cat-f">Coiffure</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Activité</div><div class="val">Salon de coiffure mixte</div>
+          <div class="lbl">Adresse</div><div class="val">7 Grand Rue, 34310 Quarante</div>
+          <div class="lbl">Tél.</div><div class="val"><a href="tel:+33619881668">06 19 88 16 68</a></div>
+        </div>
+        <p class="fiche-note">Salon en cours de reprise (information mairie) — horaires à confirmer.</p></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Kezia Beauté</span><span class="cat-f">Esthétique</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Activité</div><div class="val">Institut de beauté (gérante Mélanie)</div>
+          <div class="lbl">Adresse</div><div class="val">14 Grand-Rue, 34310 Quarante</div>
+          <div class="lbl">Tél.</div><div class="val"><a href="tel:+33670353494">06 70 35 34 94</a></div>
+        </div></div>
+      </details>
+    </div>
+
+    <p class="cat-titre">Artisans &amp; services</p>
+    <div class="fiches reveal">
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Artisans du bâtiment</span><span class="cat-f">Artisans</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Carrelage</div><div class="val">Julien Sola (carreleur) · Fred Caro Languedoc (carrelage)</div>
+          <div class="lbl">Électricité</div><div class="val">Cédric Marin (électricité)</div>
+          <div class="lbl">Menuiserie</div><div class="val">AG Menuiserie Agencement</div>
+        </div>
+        <p class="fiche-note">Artisans référencés par la mairie. D'autres corps de métier (maçon, plombier, peintre, paysagiste) existent dans la commune — liste complète à confirmer auprès de la mairie.</p></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">iad France — Élodie Cimiotta</span><span class="cat-f">Immobilier</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Activité</div><div class="val">Conseillère en immobilier (réseau iad France)</div>
+          <div class="lbl">Adresse</div><div class="val">11 rue du Crès, 34310 Quarante</div>
+        </div></div>
+      </details>
+    </div>
+
+    <div class="carte reveal" style="margin-top:24px">
+      <div class="ico">＋</div>
+      <span class="rubrique-tag">Participez</span>
+      <h3>Une ouverture, une correction&nbsp;?</h3>
+      <p>Vous ouvrez ou reprenez un commerce, ou une information est inexacte&nbsp;?
+         Écrivez-nous&nbsp;: nous en parlons gratuitement et corrigeons aussitôt.</p>
+      <p><a href="#contact" class="lire">Nous signaler une adresse →</a></p>
+    </div>
+
+    <div class="source-note" style="color:var(--gris);font-family:'IBM Plex Mono',monospace;font-size:.68rem;margin-top:24px">
+      Annuaire vérifié en juin 2026 par recoupement de sources : annuaire officiel de la mairie (ville-quarante.fr) · registres SIRENE / pappers.fr / societe.com (statut d'activité) · annuaire santé Ameli &amp; Doctolib (praticiens en exercice) · PagesJaunes, Google, Office de tourisme Canal du Midi–Saint-Chinian · sites des établissements. Les champs « à confirmer » restent à valider auprès de la mairie. Mises à jour notables : boucherie du 9 Grand'Rue reprise (Maison Aguera), fermeture de la supérette Vival, médecin généraliste en exercice = Dr Valérie Sarrazin ; l'ancienne cave coopérative a cessé (pas de caveau public sur place).
+    </div>
+  </div>
+</section>
+
+<!-- 03 AGENDA -->
+<section id="agenda">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">03</span>
+      <h2>Agenda &amp; activités</h2>
+      <p>Les rendez-vous réguliers du village et les dates publiques confirmées. Les événements annuels dont la date 2026 n'est pas encore arrêtée sont signalés « à confirmer ».</p>
+    </div>
+    <figure class="sec-photo reveal"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Quarante_porche_2.JPG/1280px-Quarante_porche_2.JPG" alt="Porche ancien dans une ruelle de Quarante" loading="lazy" decoding="async"><figcaption>© Fagairolles 34 / CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Quarante_porche_2.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure>
+
+    <h3 style="font-size:1.2rem;font-weight:600;margin-bottom:14px;color:var(--vigne)">Chaque semaine</h3>
+    <div class="agenda-liste reveal" style="margin-bottom:36px">
+      <div class="evt">
+        <div class="date"><span class="j txt">Mer<br>Ven</span></div>
+        <div><h4>Marché traditionnel</h4><p>Alimentaire &amp; vestimentaire, stand primeur le mercredi · 8h–12h</p></div>
+        <div class="lieu">Centre du village</div>
+      </div>
+      <div class="evt">
+        <div class="date"><span class="j txt">Mar</span></div>
+        <div><h4>Marché de producteurs « Éco-loco »</h4><p>Domaine ATMA, route de Pigasse · 17h–20h</p></div>
+        <div class="lieu">Domaine ATMA</div>
+      </div>
+      <div class="evt">
+        <div class="date"><span class="j txt">7j/7</span></div>
+        <div><h4>Domaine de Roueïre — Centre d'Arts et du Patrimoine</h4><p>Expositions, conférences, ateliers en famille, bibliothèque patrimoniale · 04 67 25 00 25</p></div>
+        <div class="lieu">Roueïre</div>
+      </div>
+      <div class="evt">
+        <div class="date"><span class="j txt">7j/7</span></div>
+        <div><h4>Abbatiale Sainte-Marie &amp; trésor de l'Abbadié</h4><p>Visite libre toute l'année · visites guidées sur demande</p></div>
+        <div class="lieu">Abbatiale</div>
+      </div>
+    </div>
+
+    <h3 style="font-size:1.2rem;font-weight:600;margin-bottom:14px;color:var(--vigne)">Dates 2026</h3>
+    <div class="agenda-liste reveal">
+      <div class="evt">
+        <div class="date"><span class="j">7</span><span class="m">Fév.</span></div>
+        <div><h4>« Le coin des curieux »</h4><p>Rendez-vous culturel au Domaine de Roueïre</p></div>
+        <div class="lieu">Roueïre</div>
+      </div>
+      <div class="evt">
+        <div class="date"><span class="j">4</span><span class="m">Mars</span></div>
+        <div><h4>« Histoire à croquer »</h4><p>Animation patrimoine au Domaine de Roueïre</p></div>
+        <div class="lieu">Roueïre</div>
+      </div>
+      <div class="evt">
+        <div class="date"><span class="j txt">15<br>22</span><span class="m">Mars</span></div>
+        <div><h4>Élections municipales</h4><p>Les deux tours du scrutin · bureaux de vote en mairie</p></div>
+        <div class="lieu">Mairie</div>
+      </div>
+      <div class="evt">
+        <div class="date"><span class="j txt">→10</span><span class="m">Mai</span></div>
+        <div><h4>Camin'Arts, sur la voie verte</h4><p>Parcours d'art en plein air, étape au Domaine de Roueïre (jusqu'au 10 mai 2026)</p></div>
+        <div class="lieu">Voie verte</div>
+      </div>
+      <div class="evt">
+        <div class="date"><span class="j txt">Juin</span><span class="m">à conf.</span></div>
+        <div><h4>Fête de la Saint-Jean</h4><p>Fête patronale : messe, procession du buste-reliquaire, grand feu de joie · date 2026 à confirmer</p></div>
+        <div class="lieu">Village</div>
+      </div>
+      <div class="evt">
+        <div class="date"><span class="j txt">Sept</span><span class="m">à conf.</span></div>
+        <div><h4>Journées du Patrimoine</h4><p>Visites de l'Abbatiale et du musée d'Art sacré · dates 2026 à confirmer</p></div>
+        <div class="lieu">Abbatiale</div>
+      </div>
+    </div>
+    <div class="source-note" style="color:var(--gris);font-family:'IBM Plex Mono',monospace;font-size:.68rem;margin-top:22px">
+      Sources : Office de tourisme Canal du Midi au Saint-Chinian / herault-tourisme.com · jds.fr · Domaine de Roueïre (CC Sud-Hérault). Vide-greniers, marché de Noël et animations du comité des fêtes : dates 2026 à confirmer auprès de la mairie (04 67 89 40 48).
+    </div>
+  </div>
+</section>
+
+<!-- 04 CONSEIL -->
+<section id="conseil">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">04</span>
+      <h2>Conseil municipal</h2>
+      <p>Nos comptes rendus citoyens des séances, et les liens vers les procès-verbaux officiels.
+         Décrypter, sans déformer.</p>
+    </div>
+    <figure class="sec-photo reveal"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/1280px-Quarante_mairie.JPG" alt="La mairie de Quarante" loading="lazy" decoding="async"><figcaption>© Fagairolles 34 / CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Quarante_mairie.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure>
+    <div class="conseil-grid">
+      <div class="pv-liste reveal">
+        <div class="pv">
+          <div><div class="quoi">Conseil du 5 juin 2026</div><div class="quand">Subventions aux associations, placement, sénatoriales</div></div>
+          <a href="#" data-article="conseil-5juin" rel="noopener">Notre CR</a>
+        </div>
+        <div class="pv">
+          <div><div class="quoi">Conseil du 14 avril 2026</div><div class="quand">Budget 2026, taux d'imposition, travaux réseaux &amp; église</div></div>
+          <a href="#" data-article="conseil-14avril" rel="noopener">Notre CR</a>
+        </div>
+        <div class="pv">
+          <div><div class="quoi">Conseil du 22 mars 2026</div><div class="quand">Installation · élection du maire et des 5 adjoints</div></div>
+          <a href="#" data-article="conseil-22mars" rel="noopener">Notre CR</a>
+        </div>
+        <div class="pv">
+          <div><div class="quoi">Sud-Hérault — 20 mai 2026</div><div class="quand">31 décisions intercommunales votées à l'unanimité</div></div>
+          <a href="#" data-article="ccsh-20mai" rel="noopener">Notre CR</a>
+        </div>
+        <div class="pv">
+          <div><div class="quoi">Vos droits face au conseil</div><div class="quand">Assister, lire, exiger : le mode d'emploi</div></div>
+          <a href="#" data-article="droits" rel="noopener">Lire</a>
+        </div>
+      </div>
+      <aside class="encart reveal">
+        <h3>Comment lire un compte rendu de conseil</h3>
+        <ol>
+          <li>Depuis le 1ᵉʳ juillet 2022, le document officiel est le <strong>procès-verbal (PV)</strong>, plus le « compte rendu ».</li>
+          <li>Le PV est approuvé au début de la séance suivante, signé par le maire, puis publié en ligne sous une semaine.</li>
+          <li>Une <strong>délibération</strong> = une décision (budget, subvention, urbanisme…). Regardez qui vote pour, contre, ou s'abstient.</li>
+          <li>Vous pouvez exiger copie des PV, délibérations, budgets et comptes&nbsp;: ce sont des documents publics.</li>
+        </ol>
+        <div class="loi">Sources : art. L2121-15 &amp; L2121-26 du CGCT · ordonnance n° 2021-1310 du 7 oct. 2021</div>
+      </aside>
+    </div>
+
+    <div class="exec-wrap reveal">
+      <h3>L'exécutif municipal</h3>
+      <div class="sous">Mandature 2026–2032 · liste « Bien vivre à Quarante » élue au 1er tour le 15 mars 2026 · conseil installé le 22 mars 2026 · 19 membres</div>
+      <div class="exec-grid">
+        <div class="elu maire">
+          <span class="role">Maire</span>
+          <div class="nom">Serge Ortiz</div>
+          <div class="deleg">Élu au 1er tour · succède à Gilbert Rivayrand</div>
+        </div>
+        <div class="elu">
+          <span class="role">1er adjoint</span>
+          <div class="nom">Michaël Delgado</div>
+          <div class="deleg">Délégation à confirmer</div>
+        </div>
+        <div class="elu">
+          <span class="role">2e adjointe</span>
+          <div class="nom">Élisabeth Dauzat</div>
+          <div class="deleg">Délégation à confirmer · conseillère communautaire</div>
+        </div>
+        <div class="elu">
+          <span class="role">3e adjoint</span>
+          <div class="nom">Cédric Marin</div>
+          <div class="deleg">Délégation à confirmer · conseiller communautaire</div>
+        </div>
+        <div class="elu">
+          <span class="role">4e adjointe</span>
+          <div class="nom">Marie-Christine Rey</div>
+          <div class="deleg">Délégation à confirmer</div>
+        </div>
+        <div class="elu">
+          <span class="role">5e adjoint</span>
+          <div class="nom">Clément Sola</div>
+          <div class="deleg">Délégation à confirmer</div>
+        </div>
+        <div class="elu">
+          <span class="role">Conseiller délégué</span>
+          <div class="nom">Sébastien Bardoux</div>
+          <div class="deleg">Délégation par arrêté · indemnité votée le 14/04/2026</div>
+        </div>
+      </div>
+
+      <h4 style="font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;margin:24px 0 10px">Les 19 conseillers municipaux</h4>
+      <div class="grille-asso reveal">
+        <div class="asso"><h4>Serge Ortiz</h4><p>Maire</p></div>
+        <div class="asso"><h4>Michaël Delgado</h4><p>1er adjoint</p></div>
+        <div class="asso"><h4>Élisabeth Dauzat</h4><p>2e adjointe</p></div>
+        <div class="asso"><h4>Cédric Marin</h4><p>3e adjoint</p></div>
+        <div class="asso"><h4>Marie-Christine Rey</h4><p>4e adjointe</p></div>
+        <div class="asso"><h4>Clément Sola</h4><p>5e adjoint</p></div>
+        <div class="asso"><h4>Sébastien Bardoux</h4><p>Conseiller délégué</p></div>
+        <div class="asso"><h4>Elodie Bastoul</h4><p>Conseillère</p></div>
+        <div class="asso"><h4>Nicole Cassotti</h4><p>Conseillère</p></div>
+        <div class="asso"><h4>Ingrid Da Silveira Silva</h4><p>Conseillère</p></div>
+        <div class="asso"><h4>Loïc Dété</h4><p>Conseiller · opposition</p></div>
+        <div class="asso"><h4>Emmanuel Druon</h4><p>Conseiller</p></div>
+        <div class="asso"><h4>Bruna Duchêne</h4><p>Conseillère</p></div>
+        <div class="asso"><h4>Laurent Dussel</h4><p>Conseiller</p></div>
+        <div class="asso"><h4>Sophie Larreur</h4><p>Conseillère</p></div>
+        <div class="asso"><h4>Christelle Malglaive</h4><p>Conseillère</p></div>
+        <div class="asso"><h4>Renaud Mollevi</h4><p>Conseiller</p></div>
+        <div class="asso"><h4>Aurélie Theuil-Le Carff</h4><p>Conseillère</p></div>
+        <div class="asso"><h4>Lionel Vila</h4><p>Conseiller</p></div>
+      </div>
+      <div class="source-note" style="color:var(--gris);font-family:'IBM Plex Mono',monospace;font-size:.68rem;margin-top:16px">
+        Sources : Répertoire National des Élus (RNE, mis à jour le 23/04/2026) pour l'ordre des adjoints ; procès-verbaux des conseils des 14 avril et 5 juin 2026 ; Communauté de communes Sud-Hérault pour les conseillers communautaires (Ortiz, Dauzat, Marin). Les délégations individuelles des adjoints ne sont pas encore publiées officiellement et restent à confirmer auprès de la mairie.
+      </div>
+    </div>
+
+    <div class="gabarit reveal" style="border-style:solid;border-color:var(--ocre)">
+      <span class="tag-g" style="color:var(--ocre);border-color:var(--ocre)">Dernier compte rendu</span>
+      <h3>Conseil du 5 juin 2026 : subventions, placement, sénatoriales</h3>
+      <p style="color:var(--encre-clair)">Les subventions aux associations (25 310 €), le placement des 95 000 € de la vente de l'ancienne cantine, et les désignations de délégués.</p>
+      <p style="margin-top:14px"><a href="#actu" data-article="conseil-5juin" class="btn btn-or" style="text-decoration:none">Lire le compte rendu complet →</a></p>
+    </div>
+
+    <div class="gabarit reveal" style="border-style:solid;border-color:var(--trait)">
+      <span class="tag-g">Compte rendu citoyen</span>
+      <h3>Conseil du 14 avril 2026 : budget, impôts et gros chantiers</h3>
+      <p style="color:var(--encre-clair)">Résumé fidèle des décisions, établi à partir du procès-verbal officiel. Lecture complète dans le dossier ci-dessous.</p>
+      <p style="margin-top:14px"><a href="#actu" data-article="conseil-14avril" class="btn btn-or" style="text-decoration:none">Lire le compte rendu complet →</a></p>
+    </div>
+
+    <div class="gabarit reveal" style="border-style:solid;border-color:var(--trait)">
+      <span class="tag-g">Compte rendu citoyen</span>
+      <h3>Conseil du 22 mars 2026 : installation et élection du maire</h3>
+      <p style="color:var(--encre-clair)">La séance d'installation du nouveau conseil : Serge Ortiz élu maire, cinq adjoints désignés (Delgado, Dauzat, Marin, Rey, Sola).</p>
+      <p style="margin-top:14px"><a href="#actu" data-article="conseil-22mars" class="btn btn-or" style="text-decoration:none">Lire le compte rendu complet →</a></p>
+    </div>
+
+    <div class="gabarit reveal" style="border-style:solid;border-color:var(--trait)">
+      <span class="tag-g">Intercommunalité</span>
+      <h3>Sud-Hérault : ce qu'a décidé le conseil communautaire du 20 mai 2026</h3>
+      <p style="color:var(--encre-clair)">31 délibérations, toutes votées à l'unanimité, qui engagent aussi Quarante au sein de la communauté de communes.</p>
+      <p style="margin-top:14px"><a href="#actu" data-article="ccsh-20mai" class="btn btn-or" style="text-decoration:none">Lire le compte rendu intercommunal →</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- 05 CHIFFRES CLÉS -->
+<section id="chiffres">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">05</span>
+      <h2>Chiffres clés de la commune</h2>
+      <p>Quarante en données — population, économie, logement. Chaque chiffre porte sa source et sa date.</p>
+    </div>
+    <div class="stats reveal">
+      <div class="stat"><div class="val">1 788</div><div class="lbl">habitants (population municipale)</div><div class="delta up">▲ +1,59 % (2016→2022)</div><div class="src">INSEE · RP 2022</div></div>
+      <div class="stat"><div class="val">59,1</div><div class="lbl">habitants au km² (densité)</div><div class="src">INSEE · 30,06 km²</div></div>
+      <div class="stat"><div class="val">756</div><div class="lbl">ménages fiscaux</div><div class="src">INSEE · 2018</div></div>
+      <div class="stat"><div class="val">~23 %</div><div class="lbl">de résidences secondaires</div><div class="src">INSEE · RP (à recouper)</div></div>
+      <div class="stat"><div class="val">18 970&nbsp;€</div><div class="lbl">revenu médian disponible / UC</div><div class="delta down">Hérault : 20 330 €</div><div class="src">INSEE · 2018</div></div>
+      <div class="stat"><div class="val">151</div><div class="lbl">établissements actifs</div><div class="src">INSEE · 31/12/2019</div></div>
+      <div class="stat"><div class="val">86</div><div class="lbl">exploitations viticoles</div><div class="delta down">▼ 217 en 1988</div><div class="src">Agreste · 2020</div></div>
+      <div class="stat"><div class="val">11,4 %</div><div class="lbl">taux de chômage (15-64 ans)</div><div class="src">INSEE · 2018</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 BUDGET / TRANSPARENCE (signature) -->
+<section id="budget">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">06</span>
+      <div class="eyebrow" style="flex-basis:100%">La pièce maîtresse de la transparence</div>
+      <h2>Budget : où va l'argent&nbsp;?</h2>
+      <p>L'argent de la commune est l'argent de tous. Voici, en clair, d'où il vient et où il va —
+         exercice 2024, ramené à l'habitant et comparé aux communes de taille équivalente.</p>
+    </div>
+    <figure class="sec-photo reveal"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Quarante_ecole_2.jpg/1280px-Quarante_ecole_2.jpg" alt="L'école de Quarante (équipement public communal)" loading="lazy" decoding="async"><figcaption>© Fagairolles 34 / CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Quarante_ecole_2.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure>
+
+    <div class="budget-cols">
+      <div class="flux reveal">
+        <h3>D'où vient l'argent</h3>
+        <div class="total">RECETTES DE FONCTIONNEMENT · 1 660 290 € · soit 915 €/hab</div>
+        <div class="barre"><div class="top"><span>Impôts locaux</span><span class="euro">766 900 € · 46 %</span></div><div class="piste"><div class="rempli r1" data-w="46"></div></div></div>
+        <div class="barre"><div class="top"><span>Dotations de l'État (DGF)</span><span class="euro">433 950 € · 26 %</span></div><div class="piste"><div class="rempli r2" data-w="26"></div></div></div>
+        <div class="barre"><div class="top"><span>Autres impôts &amp; taxes</span><span class="euro">148 520 € · 9 %</span></div><div class="piste"><div class="rempli r3" data-w="9"></div></div></div>
+        <div class="barre"><div class="top"><span>Autres produits</span><span class="euro">310 920 € · 19 %</span></div><div class="piste"><div class="rempli r4" data-w="19"></div></div></div>
+      </div>
+
+      <div class="flux reveal">
+        <h3>Où va l'argent</h3>
+        <div class="total">DÉPENSES TOTALES 2024 · fonctionnement + investissement</div>
+        <div class="barre"><div class="top"><span>Fonctionnement (services, école, voirie, subventions)</span><span class="euro">1 381 640 €</span></div><div class="piste"><div class="rempli r2" data-w="67"></div></div></div>
+        <div class="barre"><div class="top"><span>Investissement (équipements, travaux)</span><span class="euro">691 130 €</span></div><div class="piste"><div class="rempli r1" data-w="33"></div></div></div>
+        <p style="font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--gris);margin-top:14px;line-height:1.6">
+          Le détail par nature (personnel, énergie, subventions aux associations…) est public&nbsp;:
+          il figure au compte administratif voté en conseil. À publier ici dès obtention.</p>
+
+        <div class="dette">
+          <h3>La dette de la commune</h3>
+          <div class="dette-row"><span class="q">Encours au 31/12/2024</span><span class="commune">786 €/hab</span><span class="strate">strate : 561 €</span></div>
+          <div class="dette-row"><span class="q">Capacité de désendettement</span><span class="commune">5,0 ans</span><span class="strate">strate : 8,6 ans</span></div>
+          <div class="dette-row"><span class="q">Autofinancement (CAF)</span><span class="commune">159 €/hab</span><span class="strate">strate : 188 €</span></div>
+          <p class="verdict">En clair : Quarante est <strong>plus endettée que la moyenne</strong> de sa strate
+            (786 € contre 561 € par habitant), mais cette dette reste <strong>maîtrisée</strong> —
+            il faudrait 5 ans d'épargne pour la rembourser, contre 8,6 ans en moyenne (seuil d'alerte vers 10-12 ans).</p>
+        </div>
+      </div>
+    </div>
+    <div class="source-note">
+      Sources : comptes individuels de la commune (DGFiP, budget principal exécuté 2024) · Observatoire des finances locales (OFGL) ·
+      comparaison strate des communes de 500 à 2 000 habitants. Chiffres à recouper avec impots.gouv.fr/cll avant toute republication.
+    </div>
+    <p style="margin-top:24px"><a href="#actu" data-article="budget" class="btn btn-or" style="text-decoration:none">Lire le décryptage complet →</a></p>
+  </div>
+</section>
+
+<!-- 07 ASSOS -->
+<section id="assos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">07</span>
+      <h2>Vie associative</h2>
+      <p>Le cœur battant du village : près de 40 associations recensées. Annuaire établi à partir du Répertoire national des associations (RNA) et du site de la mairie. Présidents et contacts à confirmer pour la plupart.</p>
+    </div>
+    <figure class="sec-photo reveal"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Quarante_fontaine.JPG/1280px-Quarante_fontaine.JPG" alt="Fontaine du village de Quarante" loading="lazy" decoding="async"><figcaption>© Fagairolles 34 / CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Quarante_fontaine.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure>
+
+    <p class="cat-titre">Sport &amp; plein air</p>
+    <div class="fiches reveal" style="margin-bottom:8px">
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Association Sportive Quarantaise</span><span class="cat-f">Rugby</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Rugby à XV</div>
+          <div class="lbl">Adresse</div><div class="val">12 avenue de la Promenade, 34310 Quarante</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341007218</div>
+        </div>
+        <p class="fiche-note">Club en sommeil ces dernières années · rapprochement « Entente les 3 Clochers » (Cruzy / Saint-Chinian) à confirmer.</p></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Football Olympique Sud Hérault</span><span class="cat-f">Football</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Football</div>
+          <div class="lbl">Adresse</div><div class="val">Maison des Associations, route de Béziers</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341007902</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Tennis Club Quarantais</span><span class="cat-f">Tennis</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Tennis (affilié FFT)</div>
+          <div class="lbl">Adresse</div><div class="val">Mairie, place de la Mairie</div>
+          <div class="lbl">Contact</div><div class="val"><a href="tel:+33782484922">07 82 48 49 22</a></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341003456</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">La Boule Quarantaise</span><span class="cat-f">Boules</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Pétanque / jeu de boules</div>
+          <div class="lbl">Adresse</div><div class="val">7 rue de l'Horte</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341008916</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Gym Vitalité</span><span class="cat-f">Gym</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Gymnastique d'entretien</div>
+          <div class="lbl">Adresse</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341001900</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">40 Art et Sports</span><span class="cat-f">Multi</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Baby-gym, danse, yoseikan-budo, cardio</div>
+          <div class="lbl">Adresse</div><div class="val">Mairie, place de la Mairie</div>
+          <div class="lbl">Contact</div><div class="val"><a href="mailto:40artetsports@gmail.com">40artetsports@gmail.com</a></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341008430</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Equideo</span><span class="cat-f">Équitation</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Équitation</div>
+          <div class="lbl">Adresse</div><div class="val">Domaine de Salies, route de Capestang</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341007473</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Western Horse</span><span class="cat-f">Équitation</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Équitation western</div>
+          <div class="lbl">Adresse</div><div class="val">4 lotissement du Jeu de Mail</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341005758</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Auto Cross Gros Minet 76</span><span class="cat-f">Mécanique</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Sports mécaniques</div>
+          <div class="lbl">Adresse</div><div class="val">17 lotissement des Jardins du Jeu de Mail</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341005228</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Club Taurin Quarantais</span><span class="cat-f">Taurin</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Tradition taurine</div>
+          <div class="lbl">Adresse</div><div class="val">Lotissement le Clos du Village</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341001772</div>
+        </div></div>
+      </details>
+    </div>
+
+    <p class="cat-titre">Chasse &amp; pêche</p>
+    <div class="fiches reveal" style="margin-bottom:8px">
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Association des Pêcheurs Quarantais</span><span class="cat-f">Pêche</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Pêche de loisir</div>
+          <div class="lbl">Adresse</div><div class="val">20 avenue du Château</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341005271</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">La Diane Quarantaise</span><span class="cat-f">Chasse</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Société de chasse</div>
+          <div class="lbl">Adresse</div><div class="val">Mairie, place de la Mairie</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341001970</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Les Chasseurs des Pradels</span><span class="cat-f">Chasse</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Chasse</div>
+          <div class="lbl">Adresse</div><div class="val">Domaine des Pradels</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341006658</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Entente Sanglier CXL</span><span class="cat-f">Chasse</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Battue au sanglier</div>
+          <div class="lbl">Adresse</div><div class="val">2 rue de la Quarante</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341012110</div>
+        </div></div>
+      </details>
+    </div>
+
+    <p class="cat-titre">Culture &amp; patrimoine</p>
+    <div class="fiches reveal" style="margin-bottom:8px">
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Histoire et Patrimoine de Quarante</span><span class="cat-f">Patrimoine</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Mémoire du village &amp; abbatiale</div>
+          <div class="lbl">Adresse</div><div class="val">11 rue de la Chapelle</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341007659</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Quarante Couleurs</span><span class="cat-f">Art</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Promotion de l'art et des artistes</div>
+          <div class="lbl">Adresse</div><div class="val">9 rue de la Chapelle</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341003902</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Institution À la Peinture</span><span class="cat-f">Art</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Arts graphiques &amp; sculpture</div>
+          <div class="lbl">Adresse</div><div class="val">6 rue des Bichettes</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341001010</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Théâtre Indigo</span><span class="cat-f">Théâtre</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Spectacle vivant</div>
+          <div class="lbl">Adresse</div><div class="val">5 avenue de la Promenade</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341007331</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">J.D. Animation</span><span class="cat-f">Musique</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Musique &amp; animation</div>
+          <div class="lbl">Adresse</div><div class="val">Résidence « Le Château », 23 avenue du Château</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341006263</div>
+        </div></div>
+      </details>
+    </div>
+
+    <p class="cat-titre">Fêtes, loisirs &amp; lien social</p>
+    <div class="fiches reveal" style="margin-bottom:8px">
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Comité Permanent des Fêtes</span><span class="cat-f">Fêtes</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Animations &amp; fête locale</div>
+          <div class="lbl">Adresse</div><div class="val">Mairie, place de la Mairie</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341003280</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Festejaïres 40</span><span class="cat-f">Fêtes</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Festivités</div>
+          <div class="lbl">Adresse</div><div class="val">Mairie, place de la Mairie</div>
+          <div class="lbl">Contact</div><div class="val"><a href="mailto:patrice-stephanie-gonzales-40@orange.fr">par e-mail</a></div>
+          <div class="lbl">Président</div><div class="val">Patrice Gonzales</div>
+          <div class="lbl">N° RNA</div><div class="val">W341005872</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Club de l'Amitié et du 3ᵉ Âge</span><span class="cat-f">Aînés</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Club du troisième âge</div>
+          <div class="lbl">Adresse</div><div class="val">15 route Saint-Privat</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341007225</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">S.E.L.F.</span><span class="cat-f">Loisirs</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Sérénité, équilibre, loisir, forme</div>
+          <div class="lbl">Adresse</div><div class="val">10 avenue du Château</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341007960</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Être et Devenir</span><span class="cat-f">Social</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Action socioculturelle</div>
+          <div class="lbl">Adresse</div><div class="val">11 avenue des Platanes</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341005721</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Anciens Combattants (ACPG-CATM)</span><span class="cat-f">Mémoire</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Devoir de mémoire &amp; civisme</div>
+          <div class="lbl">Adresse</div><div class="val">12 avenue de la Gare</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341008854</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">La Grange aux Belles</span><span class="cat-f">Amicale</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Amicale / loisirs</div>
+          <div class="lbl">Adresse</div><div class="val">6 avenue du Château</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341001155</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">L.N.C. — Laissez Nous Camper</span><span class="cat-f">Loisirs</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Loisirs / camping</div>
+          <div class="lbl">Adresse</div><div class="val">13 place Berthe Fleurence</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341007825</div>
+        </div></div>
+      </details>
+    </div>
+
+    <p class="cat-titre">Écoles &amp; solidarité</p>
+    <div class="fiches reveal" style="margin-bottom:8px">
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">APE de Quarante</span><span class="cat-f">École</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Parents d'élèves (école)</div>
+          <div class="lbl">Adresse</div><div class="val">11 rue des Beaumes</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341002109</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Parents d'élèves du Collège</span><span class="cat-f">Collège</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Parents d'élèves (collège Louis-Cahuzac)</div>
+          <div class="lbl">Adresse</div><div class="val">Salle du Cadastre, Mairie</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341001400</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">De Fil en Musique</span><span class="cat-f">Solidarité</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Soutien à la recherche médicale</div>
+          <div class="lbl">Adresse</div><div class="val">4 route de Fontanche</div>
+          <div class="lbl">Contact</div><div class="val"><a href="tel:+33695541160">06 95 54 11 60</a></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341007958</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">4L aux 4 Vents</span><span class="cat-f">Solidarité</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Solidarité (raid étudiant)</div>
+          <div class="lbl">Adresse</div><div class="val">Route de Creissan</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341007326</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">Zen &amp; Co</span><span class="cat-f">Santé</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Éducation à la santé</div>
+          <div class="lbl">Adresse</div><div class="val">3 avenue des Écoles</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341007419</div>
+        </div></div>
+      </details>
+      <details class="fiche">
+        <summary><span class="chev">▸</span><span class="nom-f">AS École primaire / Collège / de l'Horte</span><span class="cat-f">Sport scolaire</span></summary>
+        <div class="fiche-corps"><div class="coord">
+          <div class="lbl">Domaine</div><div class="val">Sport scolaire</div>
+          <div class="lbl">Adresse</div><div class="val">Écoles &amp; collège de Quarante</div>
+          <div class="lbl">Contact</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">Président</div><div class="val"><span class="aconf">à confirmer</span></div>
+          <div class="lbl">N° RNA</div><div class="val">W341003061 · W341004255 · W341006158</div>
+        </div></div>
+      </details>
+    </div>
+
+    <div class="source-note" style="color:var(--gris);font-family:'IBM Plex Mono',monospace;font-size:.68rem;margin-top:24px">
+      Source : Répertoire national des associations (RNA), via annuaire-mairie.fr · ville-quarante.fr. L'état actif/dissous de chaque association est à recouper sur le Journal officiel des associations avant tout usage officiel.
+    </div>
+  </div>
+</section>
+
+<!-- 07b LE VILLAGE EN IMAGES -->
+<section id="galerie">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">07</span>
+      <h2>Le village en images</h2>
+      <p>Quelques images de Quarante et de son patrimoine. Photographies libres de droits, sous licence Creative Commons, créditées à leurs auteurs.</p>
+    </div>
+    <div class="galerie-grid reveal">
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/1280px-Quarante_mairie.JPG" alt="La mairie de Quarante" loading="lazy" width="1024" height="683">
+        <figcaption>La mairie<span class="credit">Photo : Fagairolles 34 / Wikimedia Commons · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a></span></figcaption>
+      </figure>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Quarante_fontaine.JPG/1280px-Quarante_fontaine.JPG" alt="Fontaine de Quarante" loading="lazy" width="1024" height="683">
+        <figcaption>La fontaine du village<span class="credit">Photo : Fagairolles 34 / Wikimedia Commons · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a></span></figcaption>
+      </figure>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Quarante_porche_1.JPG/1280px-Quarante_porche_1.JPG" alt="Porche ancien à Quarante" loading="lazy" width="1024" height="683">
+        <figcaption>Un porche ancien<span class="credit">Photo : Fagairolles 34 / Wikimedia Commons · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a></span></figcaption>
+      </figure>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Quarante_passage.JPG/1280px-Quarante_passage.JPG" alt="Passage couvert dans une ruelle de Quarante" loading="lazy" width="768" height="1152">
+        <figcaption>Une ruelle du centre<span class="credit">Photo : Fagairolles 34 / Wikimedia Commons · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a></span></figcaption>
+      </figure>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Eingang_Dorf_Quarante_in_der_Region_Okzitanien%2C_Frankreich.jpg" alt="Entrée du village de Quarante" loading="lazy" width="1123" height="706">
+        <figcaption>L'entrée du village<span class="credit">Photo : Barbara Arand / Wikimedia Commons · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a></span></figcaption>
+      </figure>
+      <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/%C3%89glise_Sainte-Marie_de_Quarante_1.jpg/1280px-%C3%89glise_Sainte-Marie_de_Quarante_1.jpg" alt="L'abbatiale Sainte-Marie de Quarante et sa fontaine" loading="lazy" width="1280" height="862">
+        <figcaption>L'abbatiale Sainte-Marie<span class="credit">Photo : EmDee / Wikimedia Commons · <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a></span></figcaption>
+      </figure>
+    </div>
+    <div class="galerie-note">
+      Images hébergées par Wikimedia Commons et réutilisées sous licence Creative Commons Attribution – Partage dans les mêmes conditions 4.0 (CC BY-SA 4.0). Crédits photo indiqués sous chaque image. Vous avez de belles photos de Quarante à partager ? Écrivez-nous.
+    </div>
+  </div>
+</section>
+
+<!-- 08 PARTICIPER -->
+<section id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Participation citoyenne</div>
+    <h2>Ce journal est le vôtre. Écrivez-le avec nous.</h2>
+    <p class="intro">Une info, une ouverture de commerce, une question sur une décision du conseil,
+      une photo d'événement&nbsp;? L'Écho de Quarante vit grâce aux habitants. Toute information est vérifiée avant publication.</p>
+    <form class="form-contact" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="a99c2306-7438-4b96-b391-896cb8d2d42f">
+      <input type="hidden" name="subject" value="Nouveau message via L'Écho de Quarante">
+      <input type="hidden" name="from_name" value="Site L'Écho de Quarante">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="row">
+        <div>
+          <label for="cf-nom">Votre nom</label>
+          <input id="cf-nom" type="text" name="name" required placeholder="Prénom Nom">
+        </div>
+        <div>
+          <label for="cf-email">Votre e-mail</label>
+          <input id="cf-email" type="email" name="email" required placeholder="pour que l'on puisse vous répondre">
+        </div>
+      </div>
+      <div>
+        <label for="cf-sujet">Sujet</label>
+        <select id="cf-sujet" name="Sujet">
+          <option>Proposer une info</option>
+          <option>Signaler un événement</option>
+          <option>Ouverture ou correction d'un commerce</option>
+          <option>Exercer un droit de réponse</option>
+          <option>Autre</option>
+        </select>
+      </div>
+      <div>
+        <label for="cf-msg">Votre message</label>
+        <textarea id="cf-msg" name="message" required placeholder="Votre information, question ou suggestion…"></textarea>
+      </div>
+      <button class="btn btn-or btn-submit" type="submit">Envoyer le message</button>
+      <div class="form-msg" id="cf-feedback" role="status" aria-live="polite"></div>
+    </form>
+    <p class="droit-reponse">
+      <strong>Notre engagement :</strong> séparer les faits des opinions, citer nos sources,
+      et offrir un droit de réponse à toute personne mise en cause (loi du 29 juillet 1881).
+      L'Écho de Quarante est indépendant de la mairie et de tout parti.
+    </p>
+  </div>
+</section>
+
+<section class="credits-photos">
+  <h4>Crédits photographiques</h4>
+  <p>Photographies sous licence libre, via <a href="https://commons.wikimedia.org/wiki/Quarante_(H%C3%A9rault)" target="_blank" rel="noopener">Wikimedia Commons</a> — réutilisation avec mention de l'auteur et de la licence :</p>
+  <p>
+  Bandeau-titre &amp; à la une (abbatiale Sainte-Marie de Quarante) : © EmDee, CC BY-SA 3.0 (<a href="https://commons.wikimedia.org/wiki/File:%C3%89glise_Sainte-Marie_de_Quarante_1.jpg" target="_blank" rel="noopener">fichier</a>).<br>
+  Bandeau d'accueil &amp; conseil municipal (mairie de Quarante) : © Fagairolles 34, CC BY-SA 4.0 (<a href="https://commons.wikimedia.org/wiki/File:Quarante_mairie.JPG" target="_blank" rel="noopener">fichier</a>).<br>
+  À la une, don du sang (maison ancienne de Quarante) : © Fagairolles 34, CC BY-SA 4.0 (<a href="https://commons.wikimedia.org/wiki/File:Quarante_maison_1.JPG" target="_blank" rel="noopener">fichier</a>).<br>
+  À la une, travaux (ruelle de Quarante) : © Fagairolles 34, CC BY-SA 4.0 (<a href="https://commons.wikimedia.org/wiki/File:Quarante_passage.JPG" target="_blank" rel="noopener">fichier</a>).<br>
+  À la une, écoles (école de Quarante) : © Fagairolles 34, CC BY-SA 4.0 (<a href="https://commons.wikimedia.org/wiki/File:Quarante_ecole_1.JPG" target="_blank" rel="noopener">fichier</a>).<br>
+  Commerces (porche du village) : © Fagairolles 34, CC BY-SA 4.0. Agenda (porche ancien de Quarante) : © Fagairolles 34, CC BY-SA 4.0. Budget (école de Quarante) : © Fagairolles 34, CC BY-SA 4.0. Vie associative (fontaine de Quarante) : © Fagairolles 34, CC BY-SA 4.0. Galerie « Le village en images » (mairie, fontaine, porches, ruelle, entrée du village) : © Fagairolles 34 et © Barbara Arand, CC BY-SA 4.0.
+  </p>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>L'Écho de Quarante</h4>
+        <p>Journal citoyen et indépendant d'information locale et de transparence,
+           consacré au village de Quarante (Hérault, 34310). Sans lien avec la mairie.</p>
+        <p class="ml" style="margin-top:16px">
+          <span class="ph">Mentions légales (LCEN) :</span><br>
+          Éditeur &amp; directeur de la publication : Guillaume Roque (édition à titre non professionnel)<br>
+          Hébergeur : Cloudflare, Inc. — 101 Townsend Street, San Francisco, CA 94107, USA<br>
+          Contact : <a href="#contact">via le formulaire « Participer »</a>
+        </p>
+      </div>
+      <div>
+        <h4>Rubriques</h4>
+        <ul>
+          <li><a href="#actu">Actualités</a></li>
+          <li><a href="#commerces">Commerces</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#conseil">Conseil municipal</a></li>
+          <li><a href="#chiffres">Chiffres clés</a></li>
+          <li><a href="#budget">Budget · Transparence</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>S'informer ailleurs</h4>
+        <ul>
+          <li><a href="https://www.ville-quarante.fr" target="_blank" rel="noopener">Site officiel de la mairie</a></li>
+          <li>Midi Libre · L'Indépendant</li>
+          <li>Hérault Tribune · France Bleu Hérault</li>
+          <li>INSEE — dossier commune 34226</li>
+          <li>data.ofgl.fr — finances locales</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sources-box">
+      SOURCES DES DONNÉES PUBLIÉES — Population, démographie, économie, logement, revenus : INSEE (recensement 2022 ; dossier complet, millésimes 2018-2022).
+      Finances communales 2024 : comptes individuels de la commune (DGFiP) et Observatoire des finances et de la gestion publique locales (OFGL).
+      Cadre juridique de publication : Code général des collectivités territoriales (art. L2121-15, L2121-26) ; ordonnance n° 2021-1310 du 7 octobre 2021.
+      Certaines données (part de résidences secondaires, ancienneté du maire) restent à confirmer auprès des sources primaires avant republication définitive.
+    </div>
+    <div class="foot-bas">
+      <span>© <span id="annee"></span> L'Écho de Quarante — tous droits réservés</span>
+      <span>Maquette citoyenne · v1</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ====================== LECTEUR D'ARTICLES ====================== -->
+<div class="lecteur" id="lecteur" role="dialog" aria-modal="true" aria-label="Lecture d'article">
+  <div class="lecteur-papier">
+    <div class="lecteur-barre">
+      <span>L'Écho de Quarante · Dossier</span>
+      <button class="ferme" id="fermerLecteur" aria-label="Fermer l'article">✕ Fermer</button>
+    </div>
+
+    <!-- ARTICLE 1 : BUDGET -->
+    <article class="article-body" data-art="budget" hidden>
+      <div class="surtitre">Transparence · Décryptage du budget</div>
+      <h1>Budget 2024 : où va vraiment l'argent de Quarante&nbsp;?</h1>
+      <p class="chapeau">L'argent de la commune est l'argent de tous. En épluchant les comptes officiels de 2024, on peut dire, ligne par ligne, d'où il vient et où il part — sans procès d'intention, mais sans angle mort.</p>
+      <div class="signature">Par la rédaction de L'Écho · d'après les comptes 2024 (DGFiP, ministère de l'Économie) · comparaisons : moyenne des communes de 500 à 2 000 habitants</div>
+
+      <p class="lead">Chaque année, le conseil municipal vote un budget. C'est l'acte politique le plus concret d'une mairie : il dit quels services on finance, quels travaux on engage, et combien on emprunte. Pour 2024, Quarante a perçu <strong>1,66 million d'euros</strong> de recettes de fonctionnement et dépensé <strong>1,38 million</strong>. Voici la lecture citoyenne de ces chiffres.</p>
+
+      <div class="chiffre-cle">
+        <div class="c"><div class="n">915 €</div><div class="t">de recettes par habitant (strate : 959 €)</div></div>
+        <div class="c"><div class="n">761 €</div><div class="t">de dépenses par habitant (strate : 783 €)</div></div>
+        <div class="c"><div class="n">786 €</div><div class="t">de dette par habitant (strate : 561 €)</div></div>
+      </div>
+
+      <h2>D'où vient l'argent</h2>
+      <p>Deux sources principales font vivre la commune. D'abord <strong>les impôts locaux : 766 900 €</strong>, dont l'essentiel — 686 050 € — provient de la <strong>taxe foncière sur le bâti</strong>. Fait notable pour un village viticole : la taxe foncière sur le <em>non bâti</em> (les terres, les vignes) rapporte 127 000 €, soit <strong>70 € par habitant, plus du double de la moyenne</strong> des communes comparables (33 €). Ensuite, <strong>la dotation globale de fonctionnement versée par l'État : 433 950 €</strong>. Là encore, un écart frappant : ramenée à l'habitant (239 €), cette dotation est <strong>presque le double de la moyenne de la strate</strong> (160 €). C'est une bonne nouvelle pour le budget communal, et une question légitime : à quels critères (superficie, population, péréquation) Quarante doit-elle cette générosité&nbsp;?</p>
+
+      <h2>Où va l'argent</h2>
+      <p>Le premier poste de dépense, et de loin, c'est <strong>le personnel : 697 610 €</strong>, soit plus de la moitié du fonctionnement. Rapporté à l'habitant, cela représente <strong>384 €, contre 330 € en moyenne</strong> dans les communes de taille équivalente — un niveau supérieur d'environ 16 %. Ce n'est ni anormal ni reprochable en soi : tout dépend des services rendus (école, entretien, technique). Mais c'est un chiffre qui mérite une explication publique. Viennent ensuite les <strong>achats et charges externes (392 190 €)</strong>, les <strong>contingents</strong> versés notamment aux pompiers (108 750 €), puis les <strong>intérêts de la dette (37 920 €)</strong>. À l'inverse, les <strong>subventions aux associations (26 490 €, soit 15 €/hab)</strong> sont <em>inférieures</em> à la moyenne (32 €/hab) : un arbitrage que les habitants peuvent légitimement interroger.</p>
+
+      <h2>Et la dette&nbsp;?</h2>
+      <p>C'est le point qui appelle le plus de nuance. Quarante doit <strong>1,43 million d'euros au 31 décembre 2024</strong>, soit <strong>786 € par habitant</strong> : c'est <strong>environ 40 % de plus que la moyenne</strong> des communes comparables (561 €). Faut-il s'en alarmer&nbsp;? Pas si vite. L'indicateur qui compte vraiment, c'est la <strong>capacité de désendettement</strong> : le nombre d'années qu'il faudrait à la commune pour rembourser sa dette si elle y consacrait toute son épargne. À Quarante, elle est de <strong>5 ans — nettement mieux que la moyenne de la strate (8,6 ans)</strong>, et très loin du seuil d'alerte (souvent situé autour de 10 à 12 ans). Autrement dit : Quarante est plus endettée que la moyenne, mais elle rembourse vite, parce que son épargne est solide. Le vrai sujet de vigilance n'est donc pas le niveau à un instant T, mais <strong>la trajectoire</strong> : la dette monte-t-elle ou descend-elle d'année en année&nbsp;?</p>
+
+      <div class="encadre-loi" style="border-left-color:var(--ocre)">
+        <h3>Taux 2026 : confirmés, et maintenus</h3>
+        <p>Le conseil municipal a voté le 14 avril 2026, à l'unanimité, le maintien des taux : <strong>taxe foncière bâti 41,93 %</strong>, non bâti 63,45 %, taxe d'habitation (résidences secondaires) 13,45 %. Aucune hausse de taux n'a donc été décidée.</p>
+        <p>Bon à savoir : ce taux de 41,93 % intègre, depuis 2021, l'ancienne part départementale transférée aux communes. Si votre avis augmente, c'est la revalorisation nationale des bases — décidée par l'État — qui est en cause, pas une décision du conseil.</p>
+      </div>
+
+      <div class="questions">
+        <h3>Trois questions qu'un habitant peut poser</h3>
+        <ol>
+          <li>Pourquoi les dépenses de personnel par habitant sont-elles supérieures d'environ 16 % à la moyenne des communes comparables&nbsp;?</li>
+          <li>La dette par habitant dépasse la moyenne de 40 % : à quels investissements correspond-elle, et quelle est sa trajectoire depuis 2020&nbsp;?</li>
+          <li>À quoi ont servi les 578 660 € de dépenses d'équipement de 2024&nbsp;?</li>
+        </ol>
+      </div>
+
+      <p class="droit-rep-art">Conformément à notre charte, la mairie de Quarante est invitée à répondre à ces questions ; sa réponse sera publiée intégralement.</p>
+
+      <div class="article-sources">
+        <b>Sources —</b> Comptes individuels de la commune (DGFiP, budget principal exécuté 2024), via Journal du Net, mise à jour du 07/11/2025 · Observatoire des finances et de la gestion publique locales (OFGL) · Comparaisons : moyenne des communes de 500 à 2 000 habitants. Données à recouper avec impots.gouv.fr/cll.
+      </div>
+    </article>
+
+    <!-- ARTICLE 2 : MUNICIPALES -->
+    <article class="article-body" data-art="municipales" hidden>
+      <div class="surtitre">Élections · Municipales 2026</div>
+      <h1>Municipales 2026 : ce qui change (ou pas) pour les électeurs de Quarante</h1>
+      <p class="chapeau">Une grande réforme entre en vigueur en mars 2026. Mais à Quarante, parce que le village dépasse déjà 1 000 habitants, le bouleversement est plus discret que dans les communes voisines.</p>
+      <div class="signature">Par la rédaction de L'Écho · sources : loi du 21 mai 2025, décret du 27 août 2025, ministère de l'Intérieur</div>
+
+      <p class="lead">Les électeurs de Quarante voteront les <strong>dimanches 15 et 22 mars 2026</strong> pour élire les 19 conseillers municipaux. Partout en France, une réforme change les règles du jeu. Mais son effet dépend de la taille de la commune — et Quarante se trouve du « bon » côté du seuil.</p>
+
+      <h2>La réforme, en deux mots</h2>
+      <p>La <strong>loi du 21 mai 2025</strong> généralise le <strong>scrutin de liste paritaire</strong> à toutes les communes, y compris celles de moins de 1 000 habitants. Concrètement, pour ces petits villages, c'est la fin du « panachage » (on ne pourra plus rayer ou ajouter des noms sur un bulletin) et l'obligation de présenter des <strong>listes complètes, alternant une femme et un homme</strong>.</p>
+
+      <h2>Pourquoi Quarante est peu concernée</h2>
+      <p>Avec <strong>1 788 habitants</strong> (population municipale, recensement 2022), Quarante <strong>dépasse déjà le seuil de 1 000 habitants</strong> et votait donc <em>déjà</em> au scrutin de liste lors des élections de 2020. Pour les Quarantais, le principe ne change donc quasiment pas : on vote pour une <strong>liste bloquée</strong> et paritaire, sans panachage, à deux tours. La vraie nouveauté nationale concerne surtout nos <strong>villages voisins de moins de 1 000 habitants</strong> — Montouliers, Cébazan, Villespassans… — qui devront, eux, s'adapter à un mode de scrutin inédit pour eux.</p>
+
+      <h2>Le calendrier à retenir</h2>
+      <ul>
+        <li><strong>Jusqu'au 6 février 2026</strong> : dernier délai pour s'inscrire sur les listes électorales.</li>
+        <li><strong>Du 6 au 26 février 2026 (18 h)</strong> : dépôt obligatoire des candidatures en préfecture ou sous-préfecture. Aucun dépôt par courrier ou courriel n'est admis.</li>
+        <li><strong>2 mars 2026</strong> : ouverture de la campagne officielle.</li>
+        <li><strong>15 et 22 mars 2026</strong> : les deux tours du scrutin.</li>
+      </ul>
+
+      <h2>Ce que cela change pour vous, électeur</h2>
+      <p>Le bulletin que vous glisserez dans l'urne devra rester intact : raturer un nom rendra le vote nul. Les listes seront présentées complètes, avec autant de femmes que d'hommes. Et comme pour tout scrutin de liste, c'est l'équilibre entre la liste arrivée en tête (qui obtient une prime majoritaire) et les autres listes qui déterminera la composition du conseil — donc la diversité des sensibilités représentées.</p>
+
+      <div class="encadre-verif"><strong>À vérifier en mairie.</strong> La <strong>composition nominative actuelle du conseil municipal</strong> et la liste exacte des adjoints divergent selon les annuaires en ligne. Nous publierons la composition confirmée à partir du procès-verbal d'installation et des données officielles, plutôt que de sources secondaires non fiables.</div>
+
+      <div class="questions">
+        <h3>Trois questions utiles avant le vote</h3>
+        <ol>
+          <li>Concrètement, qu'est-ce qui change pour moi par rapport à 2020, puisque Quarante votait déjà au scrutin de liste&nbsp;?</li>
+          <li>Combien de listes se présenteront, et où consulter leur programme et leur composition&nbsp;?</li>
+          <li>L'obligation stricte de parité va-t-elle modifier le visage du futur conseil&nbsp;?</li>
+        </ol>
+      </div>
+
+      <div class="article-sources">
+        <b>Sources —</b> Loi n°2025-444 du 21 mai 2025 (mode de scrutin municipal) · Décret n°2025-848 du 27 août 2025 (convocation des électeurs) · Code électoral, art. L.267 · Ministère de l'Intérieur · Population : INSEE, recensement 2022.
+      </div>
+    </article>
+
+    <!-- ARTICLE 3 : DROITS -->
+    <article class="article-body" data-art="droits" hidden>
+      <div class="surtitre">Vos droits · Mode d'emploi</div>
+      <h1>Surveiller et comprendre les décisions du conseil municipal</h1>
+      <p class="chapeau">Assister aux séances, lire les délibérations, obtenir le budget : la loi donne à chaque citoyen un véritable droit de regard sur sa mairie. Voici comment l'exercer, articles à l'appui.</p>
+      <div class="signature">Par la rédaction de L'Écho · sources : Code général des collectivités territoriales, CADA, service-public.fr</div>
+
+      <p class="lead">La transparence n'est pas une faveur que la mairie accorde : c'est un droit inscrit dans la loi. Encore faut-il savoir s'en servir. Petit guide pratique à l'usage des habitants de Quarante.</p>
+
+      <h2>1. Assister aux séances du conseil</h2>
+      <p>C'est la base : « <strong>les séances des conseils municipaux sont publiques</strong> » (article L.2121-18 du CGCT). N'importe quel habitant peut entrer et écouter les débats, sans inscription préalable. Le huis clos reste exceptionnel et doit être voté. Le caractère public autorise aussi, en principe, à enregistrer ou filmer la séance, sous réserve du bon ordre assuré par le maire.</p>
+
+      <h2>2. Obtenir les documents de la commune</h2>
+      <div class="encadre-loi">
+        <h3>Article L.2121-26 du CGCT</h3>
+        <p>« Toute personne physique ou morale a le droit de demander communication des délibérations et des procès-verbaux du conseil municipal, des budgets et des comptes de la commune et des arrêtés municipaux. »</p>
+        <p>Et même : « Chacun peut les publier sous sa responsabilité. » C'est précisément ce fondement qui autorise un journal citoyen comme le nôtre à republier ces documents publics.</p>
+      </div>
+
+      <h2>3. Le procès-verbal, document officiel depuis juillet 2022</h2>
+      <p>Depuis une réforme entrée en vigueur le <strong>1ᵉʳ juillet 2022</strong>, l'ancien « compte rendu » a disparu : le document officiel est désormais le <strong>procès-verbal (PV)</strong>. Il est arrêté au début de la séance suivante, signé par le maire, puis <strong>publié sur le site internet de la commune dans la semaine</strong> qui suit son adoption, avec un exemplaire papier consultable en mairie. Une liste des délibérations est par ailleurs affichée et mise en ligne sous huitaine.</p>
+
+      <h2>4. En cas de refus : le recours gratuit à la CADA</h2>
+      <p>Si la mairie ne répond pas ou refuse de communiquer un document, la marche à suivre est balisée :</p>
+      <ul>
+        <li><strong>Faites une demande écrite</strong> (courriel ou lettre recommandée pour garder une preuve), en précisant les documents souhaités.</li>
+        <li>La mairie dispose d'<strong>un mois pour répondre</strong> ; son silence vaut refus.</li>
+        <li>Vous pouvez alors <strong>saisir gratuitement la CADA</strong> (Commission d'accès aux documents administratifs) dans les deux mois, sur papier libre ou via cada.fr. Cette étape est un préalable obligatoire avant tout recours au tribunal.</li>
+        <li>La CADA rend un avis sous un mois. En cas de blocage persistant, le <strong>tribunal administratif</strong> peut être saisi.</li>
+      </ul>
+      <p>La consultation sur place et la mise en ligne sont gratuites ; seuls les frais de photocopie ou d'envoi peuvent vous être facturés.</p>
+
+      <div class="questions">
+        <h3>Passez à l'action</h3>
+        <ol>
+          <li>Les procès-verbaux du conseil de Quarante sont-ils bien publiés en ligne et en mairie, comme l'exige la loi depuis 2022&nbsp;?</li>
+          <li>Comment demander une copie du budget ou d'une délibération précise&nbsp;?</li>
+          <li>Que faire, étape par étape, si une demande reste sans réponse au bout d'un mois&nbsp;?</li>
+        </ol>
+      </div>
+
+      <div class="article-sources">
+        <b>Sources —</b> Code général des collectivités territoriales, art. L.2121-18 et L.2121-26 · Ordonnance n°2021-1310 du 7 octobre 2021 (entrée en vigueur le 1ᵉʳ juillet 2022) · Code des relations entre le public et l'administration · Commission d'accès aux documents administratifs (cada.fr) · service-public.gouv.fr.
+      </div>
+    </article>
+
+    <!-- ARTICLE 4 : ÉCONOMIE -->
+    <article class="article-body" data-art="economie" hidden>
+      <div class="surtitre">Économie · Le village qui change</div>
+      <h1>Cave, vignerons et emploi : l'économie de Quarante en clair</h1>
+      <p class="chapeau">En une génération, le nombre d'exploitations agricoles a fondu de 60 %, et la cave coopérative historique a changé de mains. Portrait chiffré d'un village vigneron en pleine mutation.</p>
+      <div class="signature">Par la rédaction de L'Écho · sources : INSEE, recensement agricole 2020, Vitisphere, BODACC</div>
+
+      <p class="lead">Quarante reste un village de vignes. Mais derrière l'image de carte postale, les chiffres racontent une transformation profonde de l'économie locale — et quelques fragilités qu'il serait malhonnête de passer sous silence.</p>
+
+      <h2>Un tissu économique modeste mais réel</h2>
+      <p>Au dernier comptage, la commune réunit <strong>151 établissements actifs</strong> (INSEE, 2019). Le commerce, l'hébergement et la restauration en forment le premier bloc (près de 22 %), devant la construction et les services publics. Côté emploi, on recense <strong>392 emplois sur la commune</strong> (2018), en lente progression depuis 2008. Mais le <strong>chômage atteignait 11,4 %</strong> et le <strong>revenu médian (18 970 € par an et par unité de consommation) reste inférieur</strong> à la moyenne de l'Hérault (20 330 €). Un village qui travaille, donc, mais où le pouvoir d'achat est plus contraint qu'ailleurs dans le département.</p>
+
+      <h2>La viticulture, socle fragilisé</h2>
+      <p>C'est le chiffre le plus parlant : Quarante comptait <strong>217 exploitations agricoles en 1988</strong>, contre <strong>86 en 2020</strong> — une chute de <strong>60 % en trente-deux ans</strong>. Les exploitations restantes sont plus grandes (15 hectares en moyenne, contre 7 auparavant), mais elles sont deux fois moins nombreuses à se partager le terroir. C'est tout un modèle, celui de la petite vigne familiale, qui s'est érodé.</p>
+
+      <div class="chiffre-cle">
+        <div class="c"><div class="n">217 → 86</div><div class="t">exploitations agricoles, de 1988 à 2020</div></div>
+        <div class="c"><div class="n">−60 %</div><div class="t">en trente-deux ans</div></div>
+        <div class="c"><div class="n">1934</div><div class="t">année de création de la cave coopérative</div></div>
+      </div>
+
+      <h2>La cave coopérative, symbole d'une époque qui bascule</h2>
+      <p>Fondée en <strong>1934</strong>, la cave coopérative de Quarante a vinifié jusqu'à près de 100 000 hectolitres dans les années 1970, pour des centaines d'adhérents. En <strong>janvier 2021</strong>, fragilisée, elle est placée en redressement judiciaire ; le <strong>9 juin 2021, le tribunal de commerce de Béziers valide sa reprise</strong>. Le site de Quarante est aujourd'hui devenu le <strong>centre de vinification des vins bio de la Cave de l'Ormarine</strong>, un groupement coopératif qui réunit plusieurs caves du secteur. La page de la coopérative villageoise indépendante se tourne ; une nouvelle s'ouvre, tournée vers le bio.</p>
+
+      <h2>Quel avenir&nbsp;?</h2>
+      <p>Entre la reprise de la cave, l'érosion du nombre d'exploitations et un revenu médian sous la moyenne départementale, la question économique est aussi une question d'avenir collectif. Le marché traditionnel (les jeudis et dimanches matin), les commerces de proximité et le tourisme autour de l'abbatiale et du canal du Midi sont autant d'atouts à conforter.</p>
+
+      <div class="questions">
+        <h3>Trois questions pour la suite</h3>
+        <ol>
+          <li>Après la reprise de 2021, qu'est-il advenu des emplois et des vignerons adhérents de Quarante&nbsp;?</li>
+          <li>Face à la chute du nombre d'exploitations, quels leviers la commune et l'intercommunalité Sud-Hérault peuvent-elles actionner&nbsp;?</li>
+          <li>Comment soutenir concrètement les commerces de proximité et le marché hebdomadaire&nbsp;?</li>
+        </ol>
+      </div>
+
+      <p class="droit-rep-art">Les responsables de la Cave de l'Ormarine et les commerçants cités sont invités à apporter leur témoignage, qui sera publié.</p>
+
+      <div class="article-sources">
+        <b>Sources —</b> INSEE, dossier complet commune 34226 (données 2018-2019) · Recensement agricole 2020 (Agreste) · Vitisphere (reprise de la cave coopérative, 2021) · BODACC / tribunal de commerce de Béziers · Hérault Tourisme (marché). Données entreprises antérieures à 2021, à actualiser.
+      </div>
+    </article>
+
+    <!-- ARTICLE 5 : COMPTE RENDU CONSEIL 14 AVRIL 2026 -->
+    <article class="article-body" data-art="conseil-14avril" hidden>
+      <div class="surtitre">Compte rendu citoyen · Conseil municipal</div>
+      <h1>Conseil du 14 avril 2026 : budget voté, impôts stables, mais l'eau va coûter plus cher</h1>
+      <p class="chapeau">Pour sa séance budgétaire, le conseil a adopté un budget de fonctionnement de 2,2 millions d'euros, maintenu les taux d'imposition, lancé près de 600 000 € de travaux — et relevé la surtaxe d'assainissement, qui pèsera sur les factures dès le 1ᵉʳ juin.</p>
+      <div class="signature">Par la rédaction de L'Écho · d'après le procès-verbal officiel de la séance du 14 avril 2026 · présidence : Serge Ortiz, maire · 14 présents, 15 votants sur 19</div>
+
+      <p class="lead">C'était la séance la plus importante de l'année : celle du vote du budget. Réuni le 14 avril sous la présidence du maire Serge Ortiz, le conseil municipal a tranché treize délibérations. Voici, point par point, ce qui a été décidé — et ce que cela change pour les habitants.</p>
+
+      <h2>Le budget 2026 : 2,2 millions d'euros</h2>
+      <p>Le budget principal a été adopté <strong>à l'unanimité</strong>, en équilibre à <strong>2 202 286 € en fonctionnement</strong> et <strong>1 206 900 € en investissement</strong> (délibération 2026/20). S'y ajoutent deux budgets annexes : le service de l'<strong>eau</strong> (57 148 € d'exploitation, 463 057 € d'investissement) et l'<strong>assainissement</strong> (235 809 € d'exploitation, 450 562 € d'investissement). À titre de repère, le fonctionnement de la commune tournait autour de 1,66 M€ de recettes en 2024 : la barre des 2 millions traduit une montée en charge, portée notamment par l'investissement.</p>
+
+      <h2>Impôts : les taux ne bougent pas</h2>
+      <p>Le conseil a choisi, à l'unanimité, de <strong>ne pas augmenter les taux des taxes locales</strong> pour 2026 (délibération 2026/23) :</p>
+      <div class="chiffre-cle">
+        <div class="c"><div class="n">41,93 %</div><div class="t">taxe foncière sur le bâti (inchangé)</div></div>
+        <div class="c"><div class="n">63,45 %</div><div class="t">taxe foncière sur le non bâti (inchangé)</div></div>
+        <div class="c"><div class="n">13,45 %</div><div class="t">taxe d'habitation, résidences secondaires (inchangé)</div></div>
+      </div>
+      <p>Précision utile : si votre avis de taxe foncière augmente malgré tout, ce n'est pas dû à la commune mais à la revalorisation nationale des bases décidée par l'État. Le taux de 41,93 % intègre depuis 2021 l'ancienne part départementale, transférée aux communes — ce qui explique l'écart avec les chiffres d'avant 2021.</p>
+
+      <h2>Le point qui pèsera sur les factures : la surtaxe assainissement</h2>
+      <p>C'est la décision la plus concrète pour le portefeuille des ménages raccordés. Pour combler le déséquilibre du budget assainissement, le conseil a relevé la <strong>surtaxe communale d'assainissement de 0,75 € à 0,90 € HT par mètre cube</strong>, soit <strong>+20 %</strong>, applicable dès le <strong>1ᵉʳ juin 2026</strong> (délibération 2026/24). En revanche, la surtaxe sur l'eau potable reste à 0,40 € : une hausse y était envisagée, elle n'a pas été retenue.</p>
+
+      <h2>Près de 600 000 € de travaux engagés</h2>
+      <ul>
+        <li><strong>Réseaux d'eau potable et d'eaux usées</strong> : marché attribué à l'entreprise Brault Travaux Publics (Béziers) pour <strong>497 750 € HT</strong>, en trois tranches — partie haute et partie basse de la route de Saint-Privat, puis rue de la Bascule et rue des Écoles (délibération 2026/26).</li>
+        <li><strong>Église</strong> : mise en sécurité des voûtes et révision des toitures, confiées à Maîtrise Conseils Restauration (Montpellier) pour <strong>99 350 € HT</strong> (délibération 2026/27).</li>
+      </ul>
+
+      <h2>Indemnités, CCAS et commissions</h2>
+      <p>Le conseil a créé une <strong>indemnité pour le conseiller délégué Sébastien Bardoux</strong> (4,95 %, soit 203,47 € — délibération 2026/25). Il a fixé à huit le nombre d'administrateurs du <strong>CCAS</strong> (quatre élus, quatre nommés) et désigné comme représentants Marie-Christine Rey, Nicole Cassotti, Laurent Dussel et Sophie Larreur. Cinq <strong>commissions communales</strong> ont été créées : Finances &amp; travaux, Voirie &amp; réseaux, Culture &amp; festivités, Affaires scolaires, Services généraux. La plupart des votes ont été acquis à l'unanimité ; deux délibérations (commission d'appel d'offres et commission des impôts) ont recueilli une abstention, celle de Loïc Dété. À noter : l'ancien maire Gilbert Rivayrand figure parmi les commissaires proposés à la commission communale des impôts directs.</p>
+
+      <h2>Reporté : les subventions aux associations</h2>
+      <p>Le vote des subventions aux associations, initialement à l'ordre du jour, a été <strong>reporté</strong> à une prochaine séance, le maire souhaitant d'abord rencontrer les associations. Un rendez-vous à suivre de près, vu le rôle de ces structures dans la vie du village.</p>
+
+      <div class="questions">
+        <h3>Trois questions qu'un habitant peut poser</h3>
+        <ol>
+          <li>La surtaxe d'assainissement augmente de 20 % : de combien la facture d'eau d'un foyer va-t-elle réellement augmenter, et pourquoi ce budget était-il déséquilibré ?</li>
+          <li>Les 498 000 € de travaux sur les réseaux et les 99 000 € sur l'église : quel calendrier, et quelle part financée par subventions plutôt que par emprunt ?</li>
+          <li>Quand le vote des subventions aux associations aura-t-il lieu, et selon quels critères ?</li>
+        </ol>
+      </div>
+
+      <p class="droit-rep-art">La mairie est invitée à apporter toute précision ; sa réponse sera publiée.</p>
+
+      <div class="article-sources">
+        <b>Source —</b> Procès-verbal de la séance du conseil municipal de Quarante du 14 avril 2026 (document officiel, délibérations n° 2026/20 à 2026/32).
+      </div>
+    </article>
+
+    <!-- ARTICLE 6 : COMPTE RENDU INTERCO 20 MAI 2026 -->
+    <article class="article-body" data-art="ccsh-20mai" hidden>
+      <div class="surtitre">Compte rendu citoyen · Intercommunalité</div>
+      <h1>Sud-Hérault : 31 décisions qui engagent aussi Quarante</h1>
+      <p class="chapeau">Le 20 mai 2026, le conseil communautaire de Sud-Hérault a adopté 31 délibérations, toutes à l'unanimité. Tourisme, déchets, culture, port de Capestang : tour d'horizon de ce qui concerne notre territoire.</p>
+      <div class="signature">Par la rédaction de L'Écho · d'après la liste officielle des délibérations du conseil communautaire du 20 mai 2026 (affichée le 28/05/2026) · présidence : Marie-Pierre Pons</div>
+
+      <p class="lead">Quarante n'est pas une île : la commune fait partie de la communauté de communes Sud-Hérault, qui décide pour tout le territoire. Lors de sa séance du 20 mai, le conseil communautaire a voté 31 délibérations, <strong>toutes adoptées à l'unanimité (34 voix pour)</strong>. Voici les principales.</p>
+
+      <h2>Gouvernance et fonctionnement</h2>
+      <p>Les élus ont ouvert un <strong>débat sur un pacte de gouvernance</strong> entre les communes et la communauté, acté le <strong>droit à la formation des élus</strong>, et constitué plusieurs instances : commission intercommunale des impôts, commission de contrôle financier, commission pour l'accessibilité, comité social territorial (délibérations 2026-075 à 2026-082).</p>
+
+      <h2>Économie et emploi</h2>
+      <p>Création de <strong>boîtes aux lettres commerciales</strong> dans les tiers-lieux, partenariats avec la CCI Hérault (féria des entrepreneurs, Prix de la TPE), désignation d'un représentant au comité local pour l'emploi (2026-083 à 2026-085, 2026-104).</p>
+
+      <h2>Tourisme : l'office dont dépend Quarante</h2>
+      <p>Plusieurs décisions concernent l'<strong>Office de tourisme du Canal du Midi au Saint-Chinian</strong> — celui qui couvre Quarante : modification de ses statuts, désignation de son comité de direction, et adhésion au projet de <strong>Grand Site de France « Canal du Midi »</strong>. Une convention triennale est par ailleurs signée avec le Vélo Club Saint-Chinianais pour l'<strong>entretien des sentiers de randonnée VTT</strong> (2026-086 à 2026-089).</p>
+
+      <h2>Port de Capestang, environnement, déchets</h2>
+      <p>Le conseil a lancé la <strong>requalification du port de Capestang</strong> (tranche 1, plan de financement et demandes de subventions) et engagé des conventions Natura 2000 sur l'<strong>étang de Capestang</strong>. Côté environnement, une commission va piloter le futur <strong>programme local de prévention des déchets ménagers</strong> (PLPDMA) — un sujet très concret pour les foyers (2026-080, 2026-090 à 2026-094).</p>
+
+      <h2>Culture</h2>
+      <p>L'<strong>école de musique Sud-Hérault</strong>, la saison culturelle (nouveau tarif, subventions aux manifestations d'été hors saison) et la représentation auprès de la commission régionale du patrimoine et de l'architecture figurent aussi au menu (2026-095 à 2026-098).</p>
+
+      <div class="questions">
+        <h3>Trois questions qu'un habitant peut poser</h3>
+        <ol>
+          <li>Le pacte de gouvernance en discussion : quel poids pour une commune comme Quarante au sein de Sud-Hérault ?</li>
+          <li>Le futur programme de prévention des déchets : quelles mesures concrètes attendre pour les habitants ?</li>
+          <li>École de musique et saison culturelle intercommunales : quelle offre réellement accessible aux Quarantais ?</li>
+        </ol>
+      </div>
+
+      <div class="article-sources">
+        <b>Source —</b> Liste des délibérations prises lors de la séance du conseil communautaire de la Communauté de communes Sud-Hérault du 20 mai 2026 (délibérations n° 2026-075 à 2026-105 ; document certifié affiché le 28/05/2026).
+      </div>
+    </article>
+
+    <!-- ARTICLE 7 : COMPTE RENDU CONSEIL 5 JUIN 2026 -->
+    <article class="article-body" data-art="conseil-5juin" hidden>
+      <div class="surtitre">Compte rendu citoyen · Conseil municipal</div>
+      <h1>Conseil du 5 juin : 25 310 € aux associations et 95 000 € placés</h1>
+      <p class="chapeau">Reportées en avril, les subventions aux associations ont été votées. Le conseil a aussi décidé de placer le produit de la vente de l'ancienne cantine et désigné ses délégués pour les sénatoriales de septembre.</p>
+      <div class="signature">Par la rédaction de L'Écho · d'après le procès-verbal officiel de la séance du 5 juin 2026 · présidence : Serge Ortiz, maire · 14 présents, 16 votants sur 19</div>
+
+      <p class="lead">Deuxième séance de la nouvelle équipe, et un rendez-vous attendu : le conseil municipal a réparti, le 5 juin, l'enveloppe de subventions aux associations — un vote qui avait été repoussé en avril pour laisser le temps de rencontrer les structures. Au total, dix délibérations, toutes adoptées à l'unanimité.</p>
+
+      <h2>Subventions aux associations : 25 310 € répartis</h2>
+      <p>Le conseil a approuvé (délibération 2026/33) la répartition suivante :</p>
+      <ul>
+        <li>Football Olympique Sud Hérault — <strong>5 000 €</strong></li>
+        <li>Association Sportive Quarantaise (rugby) — <strong>3 500 €</strong></li>
+        <li>Association Sportive École primaire — 2 650 €</li>
+        <li>Collège Louis Cahuzac — 2 250 €</li>
+        <li>Club Amitié et 3ᵉ âge — 2 200 €</li>
+        <li>40 Art &amp; Sports — 1 300 € · Club Taurin Paul Ricard — 1 200 € · Auto Cross Quarantais — 1 000 €</li>
+        <li>Section PG-CATM — 850 € · AS de l'Horte — 700 € · Handball Club Capestang — 700 €</li>
+        <li>Histoire et Patrimoine — 600 € · Club Pétanque 40 — 500 € · Avenir Bleu et Blanc — 500 €</li>
+        <li>Diane Quarantaise — 460 € · AS du Collège — 400 €</li>
+        <li>Donneurs de sang, Parents d'élèves du collège, APE, Pêcheurs Quarantais — 300 € chacun · Secours Catholique — 200 € · BTP CFA Occitanie — 100 €</li>
+      </ul>
+      <p>Un débat a été versé au procès-verbal : le conseiller Loïc Dété, par la voix du maire, a plaidé pour <strong>renforcer la subvention à « Histoire et Patrimoine »</strong> et pour <strong>conditionner une partie des aides aux clubs sportifs à l'entretien régulier du terrain</strong>, tout en souhaitant les voir augmenter. La répartition a finalement été adoptée à l'unanimité.</p>
+
+      <h2>95 000 € de la vente de l'ancienne cantine : placés, pas dépensés</h2>
+      <p>La commune a vendu l'ancienne cantine au Département de l'Hérault pour <strong>95 000 €</strong> (acte de juillet 2025). Plutôt que de laisser dormir cette somme, le conseil a décidé de la <strong>placer sur un compte à terme de 12 mois</strong>, rémunéré autour de 2,6 % (délibération 2026/35) — un placement qui rapportera quelques milliers d'euros d'intérêts et reste récupérable à tout moment. Une décision modificative du budget a par ailleurs ajusté les crédits pour financer les subventions votées (délibération 2026/34).</p>
+
+      <h2>Sénatoriales, intercommunalité et désignations</h2>
+      <p>À l'approche des <strong>élections sénatoriales</strong> (les grands électeurs votent en septembre), le conseil a désigné ses <strong>délégués titulaires</strong> : Élisabeth Dauzat, Serge Ortiz, Marie-Christine Rey, Mickaël Delgado et Nicole Cassotti (suppléants : Clément Sola, Aurélie Theuil-Le Carff, Cédric Marin). Plusieurs représentants ont aussi été désignés auprès d'organismes intercommunaux : commission des impôts (Cédric Marin), <strong>commission d'évaluation des charges transférées</strong> avec Sud-Hérault (le maire), insertion (Marie-Christine Rey), Hérault Ingénierie (Clément Sola), et correspondant défense (le maire). Trois habitants ont par ailleurs été tirés au sort pour le jury d'assises.</p>
+
+      <h2>En bref</h2>
+      <p>En questions diverses, l'organisation de la <strong>fête de la musique</strong> a été présentée. La séance a été levée à 18h50.</p>
+
+      <div class="questions">
+        <h3>Trois questions qu'un habitant peut poser</h3>
+        <ol>
+          <li>Selon quels critères les subventions aux associations sont-elles réparties, et la proposition de conditionner les aides sportives à l'entretien des terrains sera-t-elle mise en œuvre ?</li>
+          <li>Les 95 000 € de la vente de l'ancienne cantine : à quel projet seront-ils finalement affectés, une fois le placement arrivé à terme ?</li>
+          <li>Quelles charges la commission d'évaluation (CLECT) va-t-elle examiner entre Quarante et Sud-Hérault, et avec quel effet sur les finances de la commune ?</li>
+        </ol>
+      </div>
+
+      <p class="droit-rep-art">La mairie est invitée à apporter toute précision ; sa réponse sera publiée.</p>
+
+      <div class="article-sources">
+        <b>Source —</b> Procès-verbal de la séance du conseil municipal de Quarante du 5 juin 2026 (document officiel, délibérations n° 2026/33 à 2026/40).
+      </div>
+    </article>
+
+    <!-- ARTICLE : CONSEIL D'INSTALLATION 22 MARS 2026 -->
+    <article class="article-body" data-art="conseil-22mars" hidden>
+      <div class="surtitre">Compte rendu citoyen · Conseil municipal</div>
+      <h2>Conseil du 22 mars 2026 : installation et élection du maire</h2>
+      <p class="chapeau">Une semaine après le scrutin du 15 mars, le nouveau conseil municipal s'est réuni pour sa séance d'installation : Serge Ortiz a été élu maire et cinq adjoints ont été désignés.</p>
+      <div class="signature">Par la rédaction de L'Écho · d'après les résultats officiels des élections et le Répertoire National des Élus · mandature 2026-2032</div>
+
+      <p class="lead">C'est la première séance d'un mandat. Après la victoire de la liste « Bien vivre à Quarante » au premier tour le 15 mars 2026, les 19 conseillers nouvellement élus se sont réunis pour installer le conseil municipal et élire l'exécutif. La séance, ouverte par le doyen d'âge, a conduit à l'élection du maire puis des adjoints.</p>
+
+      <h3>Serge Ortiz élu maire</h3>
+      <p><strong>Serge Ortiz</strong> (tête de la liste « Bien vivre à Quarante ») a été élu <strong>maire de Quarante</strong>, succédant à Gilbert Rivayrand, maire de 2001 à 2026 qui ne se représentait pas. Le conseil a ensuite fixé à <strong>cinq</strong> le nombre d'adjoints.</p>
+
+      <h3>Cinq adjoints désignés</h3>
+      <p>Dans l'ordre du tableau, les adjoints élus sont :</p>
+      <ul>
+        <li><strong>Michaël Delgado</strong> — 1er adjoint</li>
+        <li><strong>Élisabeth Dauzat</strong> — 2e adjointe</li>
+        <li><strong>Cédric Marin</strong> — 3e adjoint</li>
+        <li><strong>Marie-Christine Rey</strong> — 4e adjointe</li>
+        <li><strong>Clément Sola</strong> — 5e adjoint</li>
+      </ul>
+      <p>Le conseil compte 19 membres, dont Loïc Dété, tête de la liste minoritaire, qui siège dans l'opposition. Les délégations précises des adjoints et l'indemnité du conseiller délégué Sébastien Bardoux seront fixées lors des séances suivantes (avril-juin 2026).</p>
+
+      <div class="encadre-verif">
+        <strong>Ce qui reste à vérifier :</strong> la date exacte de la séance d'installation (fenêtre légale du 20 au 22 mars 2026 pour les communes pourvues dès le 1er tour) et le détail des votes ne nous sont pas parvenus de source primaire. Le procès-verbal officiel fait foi.
+      </div>
+
+      <div class="article-sources">
+        <b>Sources —</b> Résultats des élections municipales de mars 2026 (ministère de l'Intérieur) · Répertoire National des Élus (RNE, mis à jour le 23/04/2026) · procès-verbaux des conseils suivants des 14 avril et 5 juin 2026. Procès-verbal d'installation à obtenir auprès de la mairie pour confirmation.
+      </div>
+    </article>
+
+  </div>
+</div>
+
+<script>
+  // année + date
+  document.getElementById('annee').textContent = new Date().getFullYear();
+
+  // reveal au scroll
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('vu'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // animation des barres budget quand visibles
+  const budgetIO = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.querySelectorAll('.rempli').forEach(b=>{ b.style.width = b.dataset.w + '%'; });
+        budgetIO.unobserve(e.target);
+      }
+    });
+  },{threshold:.3});
+  document.querySelectorAll('#budget .flux').forEach(el=>budgetIO.observe(el));
+
+  // ---- lecteur d'articles ----
+  const lecteur = document.getElementById('lecteur');
+  const articles = lecteur.querySelectorAll('.article-body');
+  function ouvrirArticle(cle){
+    articles.forEach(a=>{ a.hidden = (a.dataset.art !== cle); });
+    lecteur.classList.add('ouvert');
+    document.body.style.overflow = 'hidden';
+    lecteur.scrollTop = 0;
+    const papier = lecteur.querySelector('.lecteur-papier');
+    if(papier) papier.scrollIntoView({block:'start'});
+    document.getElementById('fermerLecteur').focus();
+  }
+  function fermerArticle(){
+    lecteur.classList.remove('ouvert');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('[data-article]').forEach(el=>{
+    el.addEventListener('click', ()=>ouvrirArticle(el.dataset.article));
+    el.addEventListener('keydown', e=>{
+      if(e.key==='Enter' || e.key===' '){ e.preventDefault(); ouvrirArticle(el.dataset.article); }
+    });
+  });
+  document.getElementById('fermerLecteur').addEventListener('click', fermerArticle);
+  lecteur.addEventListener('click', e=>{ if(e.target===lecteur) fermerArticle(); });
+  document.addEventListener('keydown', e=>{ if(e.key==='Escape' && lecteur.classList.contains('ouvert')) fermerArticle(); });
+</script>
+<script>
+  // ---- envoi du formulaire de contact (sans recharger la page) ----
+  (function(){
+    var f = document.getElementById('contactForm');
+    if(!f) return;
+    var fb = document.getElementById('cf-feedback');
+    f.addEventListener('submit', function(e){
+      e.preventDefault();
+      fb.className = 'form-msg'; fb.textContent = '';
+      var btn = f.querySelector('button[type="submit"]');
+      var key = f.querySelector('input[name="access_key"]').value;
+      if(key.indexOf('REMPLACER') === 0){
+        fb.className = 'form-msg err';
+        fb.textContent = "Formulaire pas encore activé : la clé d'envoi n'a pas été configurée.";
+        return;
+      }
+      btn.disabled = true; var label = btn.textContent; btn.textContent = 'Envoi en cours…';
+      fetch(f.action, { method:'POST', body:new FormData(f), headers:{'Accept':'application/json'} })
+        .then(function(r){ return r.json(); })
+        .then(function(data){
+          if(data.success){
+            fb.className = 'form-msg ok';
+            fb.textContent = 'Merci ! Votre message a bien été envoyé. Nous revenons vers vous rapidement.';
+            f.reset();
+          } else {
+            fb.className = 'form-msg err';
+            fb.textContent = "Désolé, l'envoi a échoué. Réessayez ou écrivez-nous plus tard.";
+          }
+        })
+        .catch(function(){
+          fb.className = 'form-msg err';
+          fb.textContent = "Désolé, l'envoi a échoué (connexion). Merci de réessayer.";
+        })
+        .finally(function(){ btn.disabled = false; btn.textContent = label; });
+    });
+  })();
+</script>
+</body>
+</html>

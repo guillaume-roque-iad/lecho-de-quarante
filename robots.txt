@@ -1,0 +1,5 @@
+# robots.txt — L'Écho de Quarante
+User-agent: *
+Allow: /
+
+Sitemap: https://lecho-de-quarante.pages.dev/sitemap.xml
