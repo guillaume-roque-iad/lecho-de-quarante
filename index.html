@@ -369,14 +369,14 @@
   .galerie-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
   .galerie-grid figure{margin:0;background:var(--blanc);border:1px solid var(--trait);
     border-radius:6px;overflow:hidden;box-shadow:var(--ombre)}
-  .galerie-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:var(--pierre-fonce)}
+  .galerie-grid img{width:100%;height:230px;object-fit:cover;object-position:center;display:block;background:var(--pierre-fonce)}
   .galerie-grid figcaption{padding:10px 14px;font-size:.9rem;color:var(--encre)}
   .galerie-grid figcaption .credit{display:block;font-family:'IBM Plex Mono',monospace;
     font-size:.64rem;color:var(--gris);margin-top:4px}
   .galerie-grid figcaption .credit a{color:var(--gris)}
   .galerie-note{font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--gris);margin-top:18px;line-height:1.7}
   @media(max-width:880px){.galerie-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:520px){.galerie-grid{grid-template-columns:1fr}}
+  @media(max-width:520px){.galerie-grid{grid-template-columns:1fr}.galerie-grid img{height:200px}}
 
   /* ---- formulaire de contact ---- */
   .form-contact{display:grid;gap:14px;max-width:640px;margin-top:6px}
