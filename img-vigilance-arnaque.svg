@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 960" width="1280" height="960" role="img" aria-label="Illustration : vigilance face au démarchage et aux escroqueries">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#efe8d8"/>
+      <stop offset="1" stop-color="#e3d8c2"/>
+    </linearGradient>
+    <linearGradient id="phone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a4a45"/>
+      <stop offset="1" stop-color="#2b3833"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="960" fill="url(#bg)"/>
+  <!-- soft decorative circles -->
+  <circle cx="170" cy="180" r="90" fill="#d8c9aa" opacity="0.45"/>
+  <circle cx="1110" cy="820" r="120" fill="#d8c9aa" opacity="0.40"/>
+  <!-- door / doorstep (démarchage à domicile) -->
+  <g transform="translate(150,300)">
+    <rect x="0" y="0" width="300" height="420" rx="10" fill="#b9794e"/>
+    <rect x="20" y="22" width="260" height="376" rx="6" fill="#a9683f"/>
+    <rect x="48" y="50" width="92" height="150" rx="4" fill="#c98a5c"/>
+    <rect x="160" y="50" width="92" height="150" rx="4" fill="#c98a5c"/>
+    <rect x="48" y="225" width="92" height="150" rx="4" fill="#c98a5c"/>
+    <rect x="160" y="225" width="92" height="150" rx="4" fill="#c98a5c"/>
+    <circle cx="238" cy="215" r="11" fill="#f0e6cf"/>
+  </g>
+  <!-- smartphone with suspicious call -->
+  <g transform="translate(640,250)">
+    <rect x="0" y="0" width="360" height="470" rx="46" fill="url(#phone)"/>
+    <rect x="22" y="26" width="316" height="418" rx="28" fill="#f4efe4"/>
+    <rect x="120" y="44" width="120" height="14" rx="7" fill="#d9d0bf"/>
+    <text x="180" y="150" font-family="Montserrat, Arial, sans-serif" font-size="30" font-weight="700" fill="#2b3833" text-anchor="middle">Appel entrant</text>
+    <text x="180" y="196" font-family="Montserrat, Arial, sans-serif" font-size="26" fill="#8a8273" text-anchor="middle">Numéro inconnu</text>
+    <!-- warning triangle -->
+    <g transform="translate(180,300)">
+      <path d="M 0 -78 L 92 80 L -92 80 Z" fill="#e0492f" stroke="#b8371f" stroke-width="6" stroke-linejoin="round"/>
+      <rect x="-11" y="-34" width="22" height="64" rx="11" fill="#fff"/>
+      <circle cx="0" cy="52" r="13" fill="#fff"/>
+    </g>
+  </g>
+  <!-- caption banner -->
+  <rect x="0" y="828" width="1280" height="132" fill="#2b3833"/>
+  <text x="640" y="908" font-family="Montserrat, Arial, sans-serif" font-size="52" font-weight="800" fill="#f4efe4" text-anchor="middle" letter-spacing="1">RESTONS VIGILANTS</text>
+</svg>
