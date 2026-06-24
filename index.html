@@ -8,10 +8,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://upload.wikimedia.org" crossorigin>
-<link rel="preload" as="image" fetchpriority="high" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/800px-Quarante_mairie.JPG" imagesrcset="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/480px-Quarante_mairie.JPG 480w, https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/800px-Quarante_mairie.JPG 800w, https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/1280px-Quarante_mairie.JPG 1280w" imagesizes="100vw">
+<link rel="preload" as="image" fetchpriority="high" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/960px-Quarante_mairie.JPG" imagesrcset="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/500px-Quarante_mairie.JPG 500w, https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/960px-Quarante_mairie.JPG 960w, https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/1280px-Quarante_mairie.JPG 1280w" imagesizes="100vw">
 <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"></noscript>
 <style>
+  /* Polices de secours métriquement ajustées (anti-CLS au swap des polices web) */
+  @font-face{font-family:'Inter-fallback';src:local('Arial');size-adjust:107.12%;ascent-override:90.00%;descent-override:22.43%;line-gap-override:0.00%}
+  @font-face{font-family:'Fraunces-fallback';src:local('Georgia');size-adjust:104%;ascent-override:92%;descent-override:23%;line-gap-override:0.00%}
+  @font-face{font-family:'Mono-fallback';src:local('Courier New');size-adjust:96%}
   :root{
     --encre:#1d2b36;          /* schiste / ink */
     --encre-clair:#33454f;
@@ -32,12 +36,12 @@
   body{
     background:var(--pierre);
     color:var(--encre);
-    font-family:'Inter',system-ui,sans-serif;
+    font-family:'Inter','Inter-fallback',system-ui,sans-serif;
     font-size:18px;
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
   }
-  h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;line-height:1.08;letter-spacing:-.01em}
+  h1,h2,h3,h4{font-family:'Fraunces','Fraunces-fallback',Georgia,serif;line-height:1.08;letter-spacing:-.01em}
   a{color:inherit}
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
   .mono{font-family:'IBM Plex Mono',monospace}
@@ -61,7 +65,7 @@
   .masthead .wrap{position:relative;z-index:2}
   .mast-grid{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center}
   .nombre40{
-    font-family:'Fraunces',serif;font-weight:900;font-size:clamp(78px,15vw,150px);
+    font-family:'Fraunces','Fraunces-fallback',Georgia,serif;font-weight:900;font-size:clamp(78px,15vw,150px);
     line-height:.82;color:var(--ocre);
     font-variation-settings:'opsz' 144;
     letter-spacing:-.04em;
@@ -123,7 +127,7 @@
   .carte{background:var(--blanc);border:1px solid var(--trait);border-radius:4px;
     padding:22px;box-shadow:var(--ombre)}
   .carte .ico{width:42px;height:42px;border-radius:50%;background:var(--pierre-fonce);
-    display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;
+    display:flex;align-items:center;justify-content:center;font-family:'Fraunces','Fraunces-fallback',Georgia,serif;
     font-weight:900;color:var(--vigne);margin-bottom:14px;font-size:1.2rem}
   .carte h3{font-size:1.25rem;font-weight:600;margin-bottom:6px}
   .carte p{font-size:.92rem;color:var(--encre-clair)}
@@ -133,7 +137,7 @@
   .evt{display:grid;grid-template-columns:96px 1fr auto;gap:20px;align-items:center;
     padding:18px 0;border-top:1px solid var(--trait)}
   .evt:last-child{border-bottom:1px solid var(--trait)}
-  .evt .date{font-family:'Fraunces',serif;text-align:center;line-height:1}
+  .evt .date{font-family:'Fraunces','Fraunces-fallback',Georgia,serif;text-align:center;line-height:1}
   .evt .date .j{font-size:2.1rem;font-weight:900;color:var(--encre);display:block}
   .evt .date .j.txt{font-size:1.05rem;font-weight:700;line-height:1.1}
   .evt .date .m{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.12em;
@@ -173,7 +177,7 @@
   .elu.maire{border-left:4px solid var(--ocre)}
   .elu .role{font-family:'IBM Plex Mono',monospace;font-size:.64rem;letter-spacing:.1em;
     text-transform:uppercase;color:var(--ocre);font-weight:600;margin-bottom:6px;display:block}
-  .elu .nom{font-family:'Fraunces',serif;font-size:1.12rem;font-weight:600;line-height:1.15}
+  .elu .nom{font-family:'Fraunces','Fraunces-fallback',Georgia,serif;font-size:1.12rem;font-weight:600;line-height:1.15}
   .elu .deleg{font-size:.84rem;color:var(--gris);margin-top:4px}
   .gabarit{background:var(--blanc);border:1px dashed var(--vigne);border-radius:6px;
     padding:24px 26px;margin-top:30px}
@@ -237,7 +241,7 @@
 
   /* ---- fiches dépliables ---- */
   .cat-titre{font-size:1.12rem;font-weight:600;color:var(--vigne);margin:0 0 12px;
-    font-family:'Fraunces',serif}
+    font-family:'Fraunces','Fraunces-fallback',Georgia,serif}
   .cat-titre:not(:first-of-type){margin-top:30px}
   .fiches{display:flex;flex-direction:column;gap:9px}
   .fiche{background:var(--blanc);border:1px solid var(--trait);border-radius:5px;overflow:hidden}
@@ -249,7 +253,7 @@
     transition:transform .2s ease;font-size:1rem;line-height:1}
   .fiche[open]>summary{background:var(--pierre);border-bottom:1px solid var(--trait)}
   .fiche[open]>summary .chev{transform:rotate(90deg)}
-  .fiche .nom-f{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;flex:1;line-height:1.2}
+  .fiche .nom-f{font-family:'Fraunces','Fraunces-fallback',Georgia,serif;font-size:1.1rem;font-weight:600;flex:1;line-height:1.2}
   .fiche .cat-f{font-family:'IBM Plex Mono',monospace;font-size:.6rem;letter-spacing:.08em;
     text-transform:uppercase;color:var(--vigne);border:1px solid var(--trait);
     border-radius:3px;padding:3px 7px;white-space:nowrap}
@@ -286,7 +290,7 @@
   /* ---- footer ---- */
   footer{background:var(--encre);color:var(--pierre-fonce);padding:54px 0 40px;font-size:.85rem}
   .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;margin-bottom:34px}
-  footer h4{color:var(--pierre);font-size:1.05rem;font-weight:600;margin-bottom:12px;font-family:'Fraunces',serif}
+  footer h4{color:var(--pierre);font-size:1.05rem;font-weight:600;margin-bottom:12px;font-family:'Fraunces','Fraunces-fallback',Georgia,serif}
   footer p,footer li{color:var(--pierre-fonce);line-height:1.55}
   footer ul{list-style:none}
   footer .ml{font-family:'IBM Plex Mono',monospace;font-size:.72rem;line-height:1.7}
@@ -325,12 +329,12 @@
     letter-spacing:.14em;text-transform:uppercase;color:var(--ocre);font-weight:600;margin-bottom:14px}
   .article-body h1{font-size:clamp(2rem,5vw,2.9rem);font-weight:900;line-height:1.04;margin-bottom:16px}
   .article-body .chapeau{font-size:1.2rem;line-height:1.5;color:var(--encre-clair);
-    font-family:'Fraunces',serif;font-weight:500;font-style:italic;margin-bottom:8px}
+    font-family:'Fraunces','Fraunces-fallback',Georgia,serif;font-weight:500;font-style:italic;margin-bottom:8px}
   .article-body .signature{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--gris);
     border-bottom:1px solid var(--trait);padding-bottom:22px;margin-bottom:28px}
   .article-body h2{font-size:1.5rem;font-weight:600;margin:34px 0 12px;color:var(--encre)}
   .article-body p{margin-bottom:16px;line-height:1.7}
-  .article-body p.lead::first-letter{font-family:'Fraunces',serif;font-weight:900;float:left;
+  .article-body p.lead::first-letter{font-family:'Fraunces','Fraunces-fallback',Georgia,serif;font-weight:900;float:left;
     font-size:3.6rem;line-height:.78;padding:6px 10px 0 0;color:var(--ocre)}
   .article-body strong{font-weight:700}
   .article-body ul{margin:0 0 18px 0;padding-left:0;list-style:none}
@@ -343,13 +347,13 @@
   .chiffre-cle .c .t{font-size:.8rem;color:var(--pierre-fonce);margin-top:6px}
   .encadre-loi{background:var(--blanc);border-left:4px solid var(--vigne);border-radius:4px;
     padding:18px 22px;margin:24px 0}
-  .encadre-loi h3{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;color:var(--vigne);margin-bottom:8px}
+  .encadre-loi h3{font-family:'Fraunces','Fraunces-fallback',Georgia,serif;font-size:1.1rem;font-weight:600;color:var(--vigne);margin-bottom:8px}
   .encadre-loi p{font-size:.94rem;margin-bottom:8px}
   .encadre-verif{background:#fbf3e3;border:1px dashed var(--ocre);border-radius:4px;
     padding:14px 18px;margin:22px 0;font-size:.9rem;color:#6b5320}
   .encadre-verif strong{color:var(--brique)}
   .questions{background:var(--pierre-fonce);border-radius:6px;padding:22px 24px;margin:28px 0}
-  .questions h3{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;margin-bottom:12px}
+  .questions h3{font-family:'Fraunces','Fraunces-fallback',Georgia,serif;font-size:1.15rem;font-weight:600;margin-bottom:12px}
   .questions ol{margin:0;padding-left:20px}
   .questions li{margin-bottom:8px;line-height:1.55}
   .article-sources{font-family:'IBM Plex Mono',monospace;font-size:.7rem;line-height:1.8;
@@ -445,7 +449,7 @@
     background:rgba(29,43,54,.74);color:var(--pierre);padding:4px 9px;border-top-left-radius:4px}
   .credits-photos{font-family:'IBM Plex Mono',monospace;font-size:.66rem;line-height:1.75;
     color:var(--gris);max-width:1080px;margin:0 auto;padding:34px 24px 4px}
-  .credits-photos h4{font-family:'Fraunces',Georgia,serif;font-size:1.05rem;color:var(--encre);margin-bottom:8px}
+  .credits-photos h4{font-family:'Fraunces','Fraunces-fallback',Georgia,serif;font-size:1.05rem;color:var(--encre);margin-bottom:8px}
   .credits-photos a{color:var(--vigne)}
   @media(max-width:640px){.masthead .mast-photo{width:72%;opacity:.14}.sec-photo img{height:172px}}
 </style>
@@ -473,7 +477,7 @@
 </header>
 
 <div class="hero-photo">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/1280px-Quarante_mairie.JPG" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/480px-Quarante_mairie.JPG 480w, https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/800px-Quarante_mairie.JPG 800w, https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/1280px-Quarante_mairie.JPG 1280w" sizes="100vw"
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/1280px-Quarante_mairie.JPG" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/500px-Quarante_mairie.JPG 500w, https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/960px-Quarante_mairie.JPG 960w, https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/1280px-Quarante_mairie.JPG 1280w" sizes="100vw"
        alt="La mairie de Quarante (Hérault)" loading="eager" fetchpriority="high" decoding="async" width="1280" height="853">
   <div class="legende">Quarante, au cœur du Minervois (Hérault) &middot; <strong>Photo : Fagairolles 34 / Wikimedia Commons, CC BY-SA 4.0</strong></div>
 </div>
@@ -872,7 +876,7 @@
       <p>Nos comptes rendus citoyens des séances, et les liens vers les procès-verbaux officiels.
          Décrypter, sans déformer.</p>
     </div>
-    <figure class="sec-photo reveal"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/800px-Quarante_mairie.JPG" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/480px-Quarante_mairie.JPG 480w, https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/800px-Quarante_mairie.JPG 800w, https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/1280px-Quarante_mairie.JPG 1280w" sizes="(max-width:980px) 92vw, 1040px" width="1280" height="853" alt="La mairie de Quarante" loading="lazy" decoding="async"><figcaption>© Fagairolles 34 / CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Quarante_mairie.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure>
+    <figure class="sec-photo reveal"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/800px-Quarante_mairie.JPG" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/500px-Quarante_mairie.JPG 500w, https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/960px-Quarante_mairie.JPG 960w, https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/1280px-Quarante_mairie.JPG 1280w" sizes="(max-width:980px) 92vw, 1040px" width="1280" height="853" alt="La mairie de Quarante" loading="lazy" decoding="async"><figcaption>© Fagairolles 34 / CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Quarante_mairie.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure>
     <div class="conseil-grid">
       <div class="pv-liste reveal">
         <div class="pv">
@@ -949,7 +953,7 @@
         </div>
       </div>
 
-      <h4 style="font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;margin:24px 0 10px">Les 19 conseillers municipaux</h4>
+      <h4 style="font-family:'Fraunces','Fraunces-fallback',Georgia,serif;font-size:1.05rem;font-weight:600;margin:24px 0 10px">Les 19 conseillers municipaux</h4>
       <div class="grille-asso reveal">
         <div class="asso"><h4>Serge Ortiz</h4><p>Maire</p></div>
         <div class="asso"><h4>Michaël Delgado</h4><p>1er adjoint</p></div>
@@ -1454,7 +1458,7 @@
     </div>
     <div class="galerie-grid reveal">
       <figure>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/800px-Quarante_mairie.JPG" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/480px-Quarante_mairie.JPG 480w, https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/800px-Quarante_mairie.JPG 800w, https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/1280px-Quarante_mairie.JPG 1280w" sizes="(max-width:520px) 92vw, (max-width:880px) 46vw, 340px" alt="La mairie de Quarante" loading="lazy" width="1024" height="683">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/800px-Quarante_mairie.JPG" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/500px-Quarante_mairie.JPG 500w, https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/960px-Quarante_mairie.JPG 960w, https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Quarante_mairie.JPG/1280px-Quarante_mairie.JPG 1280w" sizes="(max-width:520px) 92vw, (max-width:880px) 46vw, 340px" alt="La mairie de Quarante" loading="lazy" width="1024" height="683">
         <figcaption>La mairie<span class="credit">Photo : Fagairolles 34 / Wikimedia Commons · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a></span></figcaption>
       </figure>
       <figure>
@@ -1470,7 +1474,7 @@
         <figcaption>Une ruelle du centre<span class="credit">Photo : Fagairolles 34 / Wikimedia Commons · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a></span></figcaption>
       </figure>
       <figure>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Eingang_Dorf_Quarante_in_der_Region_Okzitanien%2C_Frankreich.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Eingang_Dorf_Quarante_in_der_Region_Okzitanien%2C_Frankreich.jpg/480px-Eingang_Dorf_Quarante_in_der_Region_Okzitanien%2C_Frankreich.jpg 480w, https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Eingang_Dorf_Quarante_in_der_Region_Okzitanien%2C_Frankreich.jpg/800px-Eingang_Dorf_Quarante_in_der_Region_Okzitanien%2C_Frankreich.jpg 800w, https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Eingang_Dorf_Quarante_in_der_Region_Okzitanien%2C_Frankreich.jpg/1280px-Eingang_Dorf_Quarante_in_der_Region_Okzitanien%2C_Frankreich.jpg 1280w" sizes="(max-width:520px) 92vw, (max-width:880px) 46vw, 340px" alt="Entrée du village de Quarante" loading="lazy" width="1123" height="706">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Eingang_Dorf_Quarante_in_der_Region_Okzitanien%2C_Frankreich.jpg/800px-Eingang_Dorf_Quarante_in_der_Region_Okzitanien%2C_Frankreich.jpg" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Eingang_Dorf_Quarante_in_der_Region_Okzitanien%2C_Frankreich.jpg/480px-Eingang_Dorf_Quarante_in_der_Region_Okzitanien%2C_Frankreich.jpg 480w, https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Eingang_Dorf_Quarante_in_der_Region_Okzitanien%2C_Frankreich.jpg/800px-Eingang_Dorf_Quarante_in_der_Region_Okzitanien%2C_Frankreich.jpg 800w" sizes="(max-width:520px) 92vw, (max-width:880px) 46vw, 340px" alt="Entrée du village de Quarante" loading="lazy" width="1123" height="706">
         <figcaption>L'entrée du village<span class="credit">Photo : Barbara Arand / Wikimedia Commons · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a></span></figcaption>
       </figure>
       <figure>
